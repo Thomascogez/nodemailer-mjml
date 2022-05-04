@@ -1,0 +1,31 @@
+{
+  "name": "nodemailer-mjml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Thomascogez/nodemailer-mjml",
+  "author": "Thomascogez <thomas.cogez@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/html-minifier": "^4.0.2",
+    "@types/mjml": "^4.7.0",
+    "@types/node": "^17.0.31",
+    "@types/nodemailer": "^6.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "mjml": "^4.12.0",
+    "mustache": "^4.2.0"
+  },
+  "peerDependencies": {
+    "nodemailer": "*"
+  }
+}

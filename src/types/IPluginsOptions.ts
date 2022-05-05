@@ -1,5 +1,5 @@
-import type { MJMLParsingOptions } from "mjml-core"
-import type { Options } from "html-minifier"
+import type { MJMLParsingOptions } from "mjml-core";
+import type { Options } from "html-minifier";
 
 export interface IPluginOptions {
     templateFolder: string;

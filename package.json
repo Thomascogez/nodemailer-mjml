@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/Thomascogez/nodemailer-mjml",
   "author": "Thomascogez <thomas.cogez@gmail.com>",
   "license": "MIT",
@@ -27,6 +30,7 @@
     "lint": "eslint . --ext .ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "postbuild": "sh script/copyCustomTypingsToDist.sh",
     "test": "jest --runInBand --passWithNoTests --bail",
     "test:watch": "jest --verbose --watchAll --runInBand --passWithNoTests --bail"
   },

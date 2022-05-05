@@ -1,0 +1,42 @@
+name: Publish 📦
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Tests:checkout"
+        uses: actions/checkout@v2
+      
+      - name: "Tests:run"
+        run: docker-compose run test yarn test
+  
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Publish:checkout"
+        uses: actions/checkout@v2
+      
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+      
+      - name: "Publish:install"
+        run: yarn
+      
+      - name: "Publish:build"
+        run: yarn build
+
+      - name: "Publish:publish package on NPM 📦"
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+    

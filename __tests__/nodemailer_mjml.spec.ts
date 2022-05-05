@@ -1,9 +1,10 @@
 import * as _ from "../src/nodemailer-extended-typing";
 import { join } from "path";
 import { buildNodemailerTransport } from "./helpers/buildNodemailerClient";
-import  mjml2html from 'mjml';
+import mjml2html from 'mjml';
 import { readFile } from "fs/promises";
 import { minify } from "html-minifier";
+import { render } from "mustache";
 import supertest from "supertest";
 import { MAILDEV_API_ENDPOINT } from "./constants/mailDev";
 
@@ -54,6 +55,36 @@ describe("Nodemailer mjml", () => {
             subject: "Valid",
             text: "Hello world?",
             templateName: "test"
+        });
+
+        const receivedMailResponse = await supertest(MAILDEV_API_ENDPOINT).get("/email");
+        expect(receivedMailResponse.status).toBe(200);
+
+        const latestReceivedMail = receivedMailResponse.body.pop();
+        expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+    });
+
+    it("should send mail with templateData rendered", async () => {
+        const rawTemplate = await readFile(join(__dirname, "resources", "test-mustache.mjml"), "utf-8");
+        const templateData = {
+            testKey: "testKey",
+            testKeyNested: {
+                nestedKey: "nestedKey"
+            }
+        };
+        const expectedOutput = render(minify(mjml2html(rawTemplate).html), templateData);
+
+        const nodeMailerTransport = buildNodemailerTransport({
+            templateFolder: join(__dirname, "resources")
+        });
+
+        await nodeMailerTransport.sendMail({
+            from: '"John doe" <john.doe@example.com>',
+            to: "doe.john@.com",
+            subject: "Valid",
+            text: "Hello world?",
+            templateName: "test-mustache",
+            templateData
         });
 
         const receivedMailResponse = await supertest(MAILDEV_API_ENDPOINT).get("/email");

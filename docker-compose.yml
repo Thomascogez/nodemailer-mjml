@@ -16,7 +16,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     links:
-      - plug_service_dev
+      - maildev
     environment:
       - MAILDEV_SMTP_PORT=25
       - MAILDEV_SMTP_ENDPOINT=maildev

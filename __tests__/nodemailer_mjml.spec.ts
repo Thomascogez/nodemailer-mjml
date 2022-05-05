@@ -1,4 +1,3 @@
-import * as _ from "../src/nodemailer-extended-typing";
 import { join } from "path";
 import { buildNodemailerTransport } from "./helpers/buildNodemailerClient";
 import mjml2html from 'mjml';

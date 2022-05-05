@@ -1,1 +1,0 @@
-cp src/nodemailer-extended-typing.d.ts ./dist

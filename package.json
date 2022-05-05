@@ -30,7 +30,6 @@
     "lint": "eslint . --ext .ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "postbuild": "sh script/copyCustomTypingsToDist.sh",
     "test": "jest --runInBand --passWithNoTests --bail",
     "test:watch": "jest --verbose --watchAll --runInBand --passWithNoTests --bail"
   },

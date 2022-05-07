@@ -82,3 +82,4 @@ const sendTemplatedEmail = async () => {
 
 sendTemplatedEmail();
 ```
+> If you want to try the above example check the **examples** folder

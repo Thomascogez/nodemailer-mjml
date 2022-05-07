@@ -11,8 +11,7 @@ import { defaultPluginOptions } from '../constants/defaultPluginOptions';
 import { checkMjmlError } from "../helpers/checkMjmlError";
 
 export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessage, callback: (err?: unknown) => void) => {
-    if (mail.data.html) return callback();
-    if (mail.data.text && !mail.data?.templateName) return callback();
+    if (mail.data.html || !mail.data?.templateName) return callback();
 
     const renderOptions: IPluginOptions = {
         ...defaultPluginOptions,

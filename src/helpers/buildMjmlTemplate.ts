@@ -21,13 +21,16 @@ export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessa
             ...options.mjmlOptions
         }
     };
+
+    
     try {
         const mjmlTemplatePath = join(options.templateFolder, `${mail.data.templateName}.mjml`);
         const rawMjmlTemplate = await readFile(mjmlTemplatePath, "utf-8").catch(() => {
             throw new Error(`[nodemailer-mjml] - Could not read mjml template at path: ${mjmlTemplatePath}`);
         });
-
-        const mustacheRenderedTemplate = render(rawMjmlTemplate, mail.data.templateData);
+        
+        const shouldRunMustacheCompiler =  'templateData' in mail.data;
+        const mustacheRenderedTemplate = shouldRunMustacheCompiler ? render(rawMjmlTemplate, mail.data.templateData) : rawMjmlTemplate;
 
         const mjmlOutput = mjml2html(mustacheRenderedTemplate, renderOptions.mjmlOptions);
         checkMjmlError(mjmlOutput);

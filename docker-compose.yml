@@ -4,7 +4,7 @@ services:
   maildev:
       image: maildev/maildev:latest
       ports:
-        - 2580:80
+        # - 2580:80
         - 25:25
       environment:
         - MAILDEV_SMTP_PORT=25

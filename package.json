@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "html-minifier": "^4.0.0",
-    "mjml": "^4.12.0",
+    "mjml": "^4.13.0",
     "mustache": "^4.2.0"
   },
   "peerDependencies": {

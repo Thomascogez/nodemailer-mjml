@@ -92,4 +92,18 @@ describe("Nodemailer mjml", () => {
         const latestReceivedMail = receivedMailResponse.body.pop();
         expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
     });
+
+
+    it("should send mail with a template using include", async () => {
+        const nodeMailerTransport = buildNodemailerTransport({
+            templateFolder: join(__dirname, "resources")
+        });
+
+        await nodeMailerTransport.sendMail({
+            from: '"John doe" <john.doe@example.com>',
+            to: "doe.john@.com",
+            subject: "Include",
+            templateName: "test-include/test-include"
+        });
+    });
 });

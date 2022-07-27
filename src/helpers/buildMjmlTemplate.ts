@@ -22,7 +22,6 @@ export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessa
         }
     };
 
-    
     try {
         const mjmlTemplatePath = join(options.templateFolder, `${mail.data.templateName}.mjml`);
         const rawMjmlTemplate = await readFile(mjmlTemplatePath, "utf-8").catch(() => {
@@ -32,7 +31,10 @@ export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessa
         const shouldRunMustacheCompiler =  'templateData' in mail.data;
         const mustacheRenderedTemplate = shouldRunMustacheCompiler ? render(rawMjmlTemplate, mail.data.templateData) : rawMjmlTemplate;
 
-        const mjmlOutput = mjml2html(mustacheRenderedTemplate, renderOptions.mjmlOptions);
+        const mjmlOutput = mjml2html(mustacheRenderedTemplate, {
+            filePath: mjmlTemplatePath,
+            ...renderOptions.mjmlOptions
+        });
         checkMjmlError(mjmlOutput);
 
         const finalHtmlOutput = renderOptions.minifyHtmlOutput ? minify(mjmlOutput.html, renderOptions.htmlMinifierOptions) : mjmlOutput.html;

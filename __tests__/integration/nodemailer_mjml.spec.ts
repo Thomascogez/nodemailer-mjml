@@ -1,11 +1,12 @@
 import { join } from "path";
-import { buildNodemailerTransport } from "./helpers/buildNodemailerClient";
+import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
 import mjml2html from 'mjml';
 import { readFile } from "fs/promises";
 import { minify } from "html-minifier";
 import { render } from "mustache";
 import supertest from "supertest";
-import { MAILDEV_API_ENDPOINT } from "./constants/mailDev";
+import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
+import { buildMjmlTemplate } from "../../src";
 
 describe("Nodemailer mjml", () => {
     it("should fail if template does not exist", async () => {
@@ -26,7 +27,7 @@ describe("Nodemailer mjml", () => {
 
     it("should fail if mjml template is invalid", async () => {
         const nodeMailerTransport = buildNodemailerTransport({
-            templateFolder: join(__dirname, "resources")
+            templateFolder: join(__dirname, "../resources")
         });
 
         await expect(
@@ -41,11 +42,12 @@ describe("Nodemailer mjml", () => {
     });
 
     it("should send mail", async () => {
-        const rawTemplate = await readFile(join(__dirname, "resources", "test.mjml"), "utf-8");
-        const expectedOutput = minify(mjml2html(rawTemplate).html);
+        const expectedOutput = await buildMjmlTemplate({
+            templateFolder: join(__dirname, "../resources")
+        }, "test");
 
         const nodeMailerTransport = buildNodemailerTransport({
-            templateFolder: join(__dirname, "resources")
+            templateFolder: join(__dirname, "../resources")
         });
 
         await nodeMailerTransport.sendMail({
@@ -64,17 +66,24 @@ describe("Nodemailer mjml", () => {
     });
 
     it("should send mail with templateData rendered", async () => {
-        const rawTemplate = await readFile(join(__dirname, "resources", "test-mustache.mjml"), "utf-8");
         const templateData = {
             testKey: "testKey",
             testKeyNested: {
                 nestedKey: "nestedKey"
             }
         };
-        const expectedOutput = render(minify(mjml2html(rawTemplate).html), templateData);
+        
+        const expectedOutput = await buildMjmlTemplate({
+            templateFolder: join(__dirname, "../resources")
+        }, "test-mustache", {
+            testKey: "testKey",
+            testKeyNested: {
+                nestedKey: "nestedKey"
+            }
+        });
 
         const nodeMailerTransport = buildNodemailerTransport({
-            templateFolder: join(__dirname, "resources")
+            templateFolder: join(__dirname, "../resources")
         });
 
         await nodeMailerTransport.sendMail({
@@ -96,7 +105,7 @@ describe("Nodemailer mjml", () => {
 
     it("should send mail with a template using include", async () => {
         const nodeMailerTransport = buildNodemailerTransport({
-            templateFolder: join(__dirname, "resources")
+            templateFolder: join(__dirname, "../resources")
         });
 
         await nodeMailerTransport.sendMail({

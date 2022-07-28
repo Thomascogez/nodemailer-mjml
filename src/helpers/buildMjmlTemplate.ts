@@ -10,8 +10,7 @@ import { IPluginOptions } from "../types/IPluginsOptions";
 import { defaultPluginOptions } from '../constants/defaultPluginOptions';
 import { checkMjmlError } from "../helpers/checkMjmlError";
 
-export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessage, callback: (err?: unknown) => void) => {
-    if (mail.data.html || !mail.data?.templateName) return callback();
+export const buildMjmlTemplate = async (options: IPluginOptions, templateName: string, templateData?: Record<never, never>) => {
 
     const renderOptions: IPluginOptions = {
         ...defaultPluginOptions,
@@ -22,27 +21,21 @@ export const buildMjmlTemplate = async (options: IPluginOptions, mail: MailMessa
         }
     };
 
-    try {
-        const mjmlTemplatePath = join(options.templateFolder, `${mail.data.templateName}.mjml`);
-        const rawMjmlTemplate = await readFile(mjmlTemplatePath, "utf-8").catch(() => {
-            throw new Error(`[nodemailer-mjml] - Could not read mjml template at path: ${mjmlTemplatePath}`);
-        });
-        
-        const shouldRunMustacheCompiler =  'templateData' in mail.data;
-        const mustacheRenderedTemplate = shouldRunMustacheCompiler ? render(rawMjmlTemplate, mail.data.templateData) : rawMjmlTemplate;
+    const mjmlTemplatePath = join(options.templateFolder, `${templateName}.mjml`);
+    const rawMjmlTemplate = await readFile(mjmlTemplatePath, "utf-8").catch(() => {
+        throw new Error(`[nodemailer-mjml] - Could not read mjml template at path: ${mjmlTemplatePath}`);
+    });
 
-        const mjmlOutput = mjml2html(mustacheRenderedTemplate, {
-            filePath: mjmlTemplatePath,
-            ...renderOptions.mjmlOptions
-        });
-        checkMjmlError(mjmlOutput);
+    const shouldRunMustacheCompiler = !!templateData && Object.keys(templateData).length > 0;
+    const mustacheRenderedTemplate = shouldRunMustacheCompiler ? render(rawMjmlTemplate, templateData) : rawMjmlTemplate;
 
-        const finalHtmlOutput = renderOptions.minifyHtmlOutput ? minify(mjmlOutput.html, renderOptions.htmlMinifierOptions) : mjmlOutput.html;
+    const mjmlOutput = mjml2html(mustacheRenderedTemplate, {
+        filePath: mjmlTemplatePath,
+        ...renderOptions.mjmlOptions
+    });
+    checkMjmlError(mjmlOutput);
 
-        Object.assign(mail.data, { html: finalHtmlOutput });
+    const finalHtmlOutput = renderOptions.minifyHtmlOutput ? minify(mjmlOutput.html, renderOptions.htmlMinifierOptions) : mjmlOutput.html;
 
-        return callback();
-    } catch (error) {
-        return callback(error);
-    }
+    return finalHtmlOutput;
 };

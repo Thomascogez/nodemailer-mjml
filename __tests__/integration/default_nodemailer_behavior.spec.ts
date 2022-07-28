@@ -1,9 +1,10 @@
-import { buildNodemailerTransport } from "./helpers/buildNodemailerClient";
+import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
 import supertest from "supertest";
-import { MAILDEV_API_ENDPOINT } from "./constants/mailDev";
+import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
+import { join } from "path";
 describe("Default nodemailer behavior", () => {
     it("should send a normal html mail without failing", async () => {
-        const nodeMailerTransport = buildNodemailerTransport({ templateFolder: __dirname });
+        const nodeMailerTransport = buildNodemailerTransport({ templateFolder: join(__dirname, "../resources") });
 
         const mailHtmlContent = "<b>Hello world?</b>";
         await nodeMailerTransport.sendMail({
@@ -22,7 +23,7 @@ describe("Default nodemailer behavior", () => {
     });
 
     it("should send a normal text mail without failing", async () => {
-        const nodeMailerTransport = buildNodemailerTransport({ templateFolder: __dirname });
+        const nodeMailerTransport = buildNodemailerTransport({ templateFolder: join(__dirname, "../resources") });
 
         const mailTextContent = "Hello world?";
         await nodeMailerTransport.sendMail({

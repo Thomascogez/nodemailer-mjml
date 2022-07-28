@@ -1,3 +1,4 @@
+import { PluginFunction } from "nodemailer/lib/mailer";
 import type MailMessage from "nodemailer/lib/mailer/mail-message";
 import { buildMjmlTemplate } from "./helpers/buildMjmlTemplate";
 import type { IPluginOptions } from "./types/IPluginsOptions";
@@ -8,8 +9,8 @@ declare module 'nodemailer/lib/mailer' {
     }
 }
 
-const nodemailerMjmlPlugin = (options: IPluginOptions) => {
-    return async (mail: MailMessage, callback: (err?: unknown) => void) => {
+const nodemailerMjmlPlugin = (options: IPluginOptions): PluginFunction => {
+    return async (mail: MailMessage, callback: (err?: Error | null) => void) => {
         if (mail.data.html || !mail.data?.templateName) return callback();
 
         try {
@@ -19,7 +20,7 @@ const nodemailerMjmlPlugin = (options: IPluginOptions) => {
             Object.assign(mail.data, { html: mailHtmlContent });
             return callback();
         } catch (error) {
-            return callback(error);
+            return callback(error as Error | null);
         }
     };
 };

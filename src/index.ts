@@ -9,12 +9,23 @@ declare module 'nodemailer/lib/mailer' {
 }
 
 const nodemailerMjmlPlugin = (options: IPluginOptions) => {
-    return (mail: MailMessage, callback: () => void)  =>{
-        return buildMjmlTemplate(options, mail, callback);
+    return async (mail: MailMessage, callback: (err?: unknown) => void) => {
+        if (mail.data.html || !mail.data?.templateName) return callback();
+
+        try {
+            const { templateData, templateName } = mail.data;
+            const mailHtmlContent = await buildMjmlTemplate(options, templateName, templateData);
+
+            Object.assign(mail.data, { html: mailHtmlContent });
+            return callback();
+        } catch (error) {
+            return callback(error);
+        }
     };
 };
 
 export default nodemailerMjmlPlugin;
+
 export {
     nodemailerMjmlPlugin,
     buildMjmlTemplate,

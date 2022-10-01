@@ -48,9 +48,9 @@ Run test
 
 ```sh
 # watch mode
-docker compose run tests yarn test:watch
+docker compose run --rm tests yarn test:watch
 #single run
-docker compose run tests yarn test
+docker compose run --rm tests yarn test
 ```
 
 ## Example usage

@@ -17,6 +17,8 @@ services:
       - /usr/src/app/node_modules
     links:
       - maildev
+    depends_on:
+      - maildev
     environment:
       - MAILDEV_SMTP_PORT=25
       - MAILDEV_SMTP_ENDPOINT=maildev

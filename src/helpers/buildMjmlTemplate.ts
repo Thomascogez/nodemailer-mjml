@@ -1,16 +1,16 @@
-import type MailMessage from "nodemailer/lib/mailer/mail-message";
 
-import { join } from "path";
 import { readFile } from "fs/promises";
-import { render } from "mustache";
 import { minify } from "html-minifier";
 import mjml2html from "mjml";
+import { render } from "mustache";
+import { join } from "path";
 
-import { IPluginOptions } from "../types/IPluginsOptions";
 import { defaultPluginOptions } from '../constants/defaultPluginOptions';
 import { checkMjmlError } from "../helpers/checkMjmlError";
+import { BuildMjmlTemplateOptions } from "../types/BuildMjmlTemplateOptions";
+import { IPluginOptions } from "../types/IPluginsOptions";
 
-export const buildMjmlTemplate = async (options: IPluginOptions, templateName: string, templateData?: Record<never, never>) => {
+export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplateOptions: BuildMjmlTemplateOptions ) => {
 
     const renderOptions: IPluginOptions = {
         ...defaultPluginOptions,
@@ -20,6 +20,8 @@ export const buildMjmlTemplate = async (options: IPluginOptions, templateName: s
             ...options.mjmlOptions
         }
     };
+
+    const {templateData, templateName} = sendMailTemplateOptions;
 
     const mjmlTemplatePath = join(options.templateFolder, `${templateName}.mjml`);
     const rawMjmlTemplate = await readFile(mjmlTemplatePath, "utf-8").catch(() => {

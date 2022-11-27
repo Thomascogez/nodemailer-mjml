@@ -15,7 +15,7 @@ const nodemailerMjmlPlugin = (options: IPluginOptions): PluginFunction => {
 
         try {
             const { templateData, templateName } = mail.data;
-            const mailHtmlContent = await buildMjmlTemplate(options, templateName, templateData);
+            const mailHtmlContent = await buildMjmlTemplate(options, { templateName, templateData });
 
             Object.assign(mail.data, { html: mailHtmlContent });
             return callback();

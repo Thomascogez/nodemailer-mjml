@@ -1,12 +1,9 @@
-import { join } from "path";
-import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
-import mjml2html from 'mjml';
-import { readFile } from "fs/promises";
 import { minify } from "html-minifier";
-import { render } from "mustache";
+import { join } from "path";
 import supertest from "supertest";
-import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
 import { buildMjmlTemplate } from "../../src";
+import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
+import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
 
 describe("Nodemailer mjml", () => {
     it("should fail if template does not exist", async () => {
@@ -42,9 +39,10 @@ describe("Nodemailer mjml", () => {
     });
 
     it("should send mail", async () => {
-        const expectedOutput = await buildMjmlTemplate({
-            templateFolder: join(__dirname, "../resources")
-        }, "test");
+        const expectedOutput = await buildMjmlTemplate(
+            { templateFolder: join(__dirname, "../resources") },
+            { templateName: "test" }
+        );
 
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")
@@ -72,15 +70,19 @@ describe("Nodemailer mjml", () => {
                 nestedKey: "nestedKey"
             }
         };
-        
-        const expectedOutput = await buildMjmlTemplate({
-            templateFolder: join(__dirname, "../resources")
-        }, "test-mustache", {
-            testKey: "testKey",
-            testKeyNested: {
-                nestedKey: "nestedKey"
-            }
-        });
+
+        const expectedOutput = await buildMjmlTemplate(
+            { templateFolder: join(__dirname, "../resources") },
+            {
+                templateName: "test-mustache",
+                templateData: {
+                    testKey: "testKey",
+                    testKeyNested: {
+                        nestedKey: "nestedKey"
+                    },
+                }
+
+            });
 
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")

@@ -1,5 +1,7 @@
 import { PluginFunction } from "nodemailer/lib/mailer";
 import type MailMessage from "nodemailer/lib/mailer/mail-message";
+import type { BuildMjmlTemplateOptions } from "./types/BuildMjmlTemplateOptions";
+
 import { buildMjmlTemplate } from "./helpers/buildMjmlTemplate";
 import type { IPluginOptions } from "./types/IPluginsOptions";
 declare module 'nodemailer/lib/mailer' {
@@ -32,5 +34,6 @@ export default nodemailerMjmlPlugin;
 export {
     nodemailerMjmlPlugin,
     buildMjmlTemplate,
+    BuildMjmlTemplateOptions,
     IPluginOptions
 };

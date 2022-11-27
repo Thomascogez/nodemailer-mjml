@@ -6,6 +6,8 @@ declare module 'nodemailer/lib/mailer' {
     interface Options {
         templateName?: string;
         templateData?: Record<never, never>
+        templateLayoutName?: string;
+        templateLayoutSlots?: Record<string, string>
     }
 }
 

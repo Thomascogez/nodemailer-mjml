@@ -1,10 +1,6 @@
 <mjml>
   <mj-body>
-    <mj-section>
-      <mj-column>
-       {{ slots:header }}
-      </mj-column>
-    </mj-section>
+    {{ slots:header }}
     <mj-section background-color="#f3f3f3">
       <mj-column>
         <mj-image width="170px" src="http://i.imgur.com/nwNZ0TW.png"></mj-image>

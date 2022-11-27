@@ -1,6 +1,6 @@
 import { access, readFile } from "fs/promises";
 import { render } from "mustache";
-import { join } from "path";
+import { dirname, join } from "path";
 import { BuildLayoutTemplateOptions } from "../types/BuildLayoutTemplateOptions";
 
 export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
@@ -25,9 +25,11 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
 
                 const defaultSlotFilePath = join(templateFolder, templateSharedFolder, `${slotName}.mjml`);
                 const hasDefaultSlotFile = await access(defaultSlotFilePath).then(() => true).catch(() => false);
-
+                
+                
                 if (hasDefaultSlotFile) {
-                    return [`slots:${slotName}`, `<mj-include path="${join(templateSharedFolder, `${slotName}.mjml`)}" />`];
+                    const dirBackwardWalk = Array.from({length: dirname(`${templateLayoutName}.mjml`).split("/").length}, () => "../").join("");
+                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templateSharedFolder, `${slotName}.mjml`)}" />`];
                 }
 
                 return [`slots:${slotName}`, ""];
@@ -35,5 +37,5 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
         )
     );
 
-    return render(layoutFileContent, layoutSlotsContent, {}, { escape: (text) => text });
+    return render(layoutFileContent, layoutSlotsContent, {}, {escape: (text) => text});
 };

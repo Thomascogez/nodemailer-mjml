@@ -75,10 +75,10 @@ describe("Build layout", () => {
         });
 
         expect(buildedLayout).toBeDefined();
-        expect(buildedLayout).toContain(`<mj-include path="/include/header.mjml" />`);
+        expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
     });
 
-    it("should not render any slots fallback slots content files does not exist", async() => {
+    it("should not render any slots since fallback slots content files does not exist", async() => {
         const buildedLayout = await buildLayout({
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-multiple-slots",

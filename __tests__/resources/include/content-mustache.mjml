@@ -1,0 +1,1 @@
+<mj-button>{{ content }}</mj-button>

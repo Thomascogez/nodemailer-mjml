@@ -63,7 +63,7 @@ describe("Build layout", () => {
         });
 
         expect(buildedLayout).toBeDefined();
-        expect(buildedLayout).toContain(`<mj-include path="/include/header.mjml" />`);
+        expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
     });
 
     it("should compile a layout file with slots and fallback to default slot file", async () => {
@@ -88,9 +88,9 @@ describe("Build layout", () => {
         });
 
         expect(buildedLayout).toBeDefined();
-        expect(buildedLayout).not.toContain(`<mj-include path="/include/header-that-does-not-exist.mjml" />`);
-        expect(buildedLayout).not.toContain(`<mj-include path="/include/content-that-does-not-exist.mjml" />`);
-        expect(buildedLayout).not.toContain(`<mj-include path="/include/customFooter.mjml" />`);
+        expect(buildedLayout).not.toContain(`<mj-include path="../include/header-that-does-not-exist.mjml" />`);
+        expect(buildedLayout).not.toContain(`<mj-include path="../include/content-that-does-not-exist.mjml" />`);
+        expect(buildedLayout).not.toContain(`<mj-include path="../include/customFooter.mjml" />`);
 
         expect(buildedLayout).not.toContain(`{{ slots:customHeader }}`);
         expect(buildedLayout).not.toContain(`{{ slots:customContent }}`);
@@ -110,9 +110,9 @@ describe("Build layout", () => {
         });
 
         expect(buildedLayout).toBeDefined();
-        expect(buildedLayout).toContain(`<mj-include path="/include/header.mjml" />`);
-        expect(buildedLayout).toContain(`<mj-include path="/include/content.mjml" />`);
-        expect(buildedLayout).toContain(`<mj-include path="/include/customFooter.mjml" />`);
+        expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
+        expect(buildedLayout).toContain(`<mj-include path="../include/content.mjml" />`);
+        expect(buildedLayout).toContain(`<mj-include path="../include/customFooter.mjml" />`);
 
         expect(buildedLayout).not.toContain(`{{ slots:customHeader }}`);
         expect(buildedLayout).not.toContain(`{{ slots:customContent }}`);

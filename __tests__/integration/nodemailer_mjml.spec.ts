@@ -135,7 +135,15 @@ describe("Nodemailer mjml", () => {
             ).rejects.toThrow();
         });
 
-        it("should send an email with a layout with fallback header", async () => {
+        it("should send an email with a layout and fallback header", async () => {
+
+            const expectedOutput = await buildMjmlTemplate({
+                templateFolder: join(__dirname, "../resources"),
+                templatePartialsFolder: "/include"
+            }, {
+                templateLayoutName: "layout/layout-single-slot"
+            });
+
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
                 templatePartialsFolder: "/include"
@@ -148,6 +156,50 @@ describe("Nodemailer mjml", () => {
                 text: "Hello world?",
                 templateLayoutName: "layout/layout-single-slot"
             });
+
+            const receivedMailResponse = await supertest(MAILDEV_API_ENDPOINT).get("/email");
+            expect(receivedMailResponse.status).toBe(200);
+
+            const latestReceivedMail = receivedMailResponse.body.pop();
+            expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+        });
+
+        it("should send an email with rendered layout slots", async () => {
+            const templateData = {
+                headerTitle: "Header title",
+                content: "Content",
+                footerText: "Footer text"
+            };
+
+            const templateLayoutSlots = {
+                customHeader: "include/header-mustache",
+                customContent: "include/content-mustache",
+                customFooter: "include/footer-mustache",
+            };
+
+            const nodeMailerTransport = buildNodemailerTransport({
+                templateFolder: join(__dirname, "../resources"),
+                templatePartialsFolder: "/include"
+            });
+
+            await nodeMailerTransport.sendMail({
+                from: '"John doe" <john.doe@example.com>',
+                to: "doe.john@.com",
+                subject: "Hello ✔",
+                text: "Hello world?",
+                templateLayoutName: "layout/layout-multiple-slots",
+                templateLayoutSlots,
+                templateData
+            });
+
+            const receivedMailResponse = await supertest(MAILDEV_API_ENDPOINT).get("/email");
+            expect(receivedMailResponse.status).toBe(200);
+
+            const latestReceivedMail = receivedMailResponse.body.pop();
+            
+            expect(latestReceivedMail.html).toContain(templateData.content);
+            expect(latestReceivedMail.html).toContain(templateData.footerText);
+            expect(latestReceivedMail.html).toContain(templateData.headerTitle);
         });
     });
 });

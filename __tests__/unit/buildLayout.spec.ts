@@ -52,7 +52,7 @@ describe("Build layout", () => {
         expect(buildedLayout).toEqual(originalLayoutContent);
     });
 
-    it("should compile a layout file with slots and templateSlots", async () => {
+    it("should compile a layout file with slots and replace them with given templateSlots", async () => {
         const buildedLayout = await buildLayout({
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-single-slot",
@@ -66,7 +66,7 @@ describe("Build layout", () => {
         expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
     });
 
-    it("should compile a layout file with slots and fallback to default slot file", async () => {
+    it("should compile a layout file with slots and replace them with given and fallback slots", async () => {
         const buildedLayout = await buildLayout({
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-single-slot",
@@ -76,6 +76,17 @@ describe("Build layout", () => {
 
         expect(buildedLayout).toBeDefined();
         expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
+    });
+
+    it("should compile a layout file with slots and should not fallback to default slots since templatePartialsFolder is not defined", async () => {
+        const buildedLayout = await buildLayout({
+            templateFolder: join(__dirname, "../resources"),
+            templateLayoutName: "layout/layout-single-slot",
+            templateLayoutSlots: {},
+        });
+
+        expect(buildedLayout).toBeDefined();
+        expect(buildedLayout).not.toContain(`<mj-include path="../include/header.mjml" />`);
     });
 
     it("should not render any slots since fallback slots content files does not exist", async() => {

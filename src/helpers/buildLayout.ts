@@ -18,19 +18,21 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
     const layoutSlotsContent = Object.fromEntries(
         await Promise.all(
             layoutSlotsName.map(async (slotName) => {
-                const dirBackwardWalk = Array.from({length: dirname(`${templateLayoutName}.mjml`).split("/").length}, () => "../").join("");
-                
+                const dirBackwardWalk = Array.from({ length: dirname(`${templateLayoutName}.mjml`).split("/").length }, () => "../").join("");
+
                 const slotContent = (templateLayoutSlots ?? {})[slotName];
                 if (slotContent) {
-                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk,slotContent)}.mjml" />`];
+                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, slotContent)}.mjml" />`];
                 }
 
-                const defaultSlotFilePath = join(templateFolder, templatePartialsFolder, `${slotName}.mjml`);
-                const hasDefaultSlotFile = await access(defaultSlotFilePath).then(() => true).catch(() => false);
-                
-                
-                if (hasDefaultSlotFile) {
-                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templatePartialsFolder, `${slotName}.mjml`)}" />`];
+                if (templatePartialsFolder) {
+                    const defaultSlotFilePath = join(templateFolder, templatePartialsFolder, `${slotName}.mjml`);
+                    const hasDefaultSlotFile = await access(defaultSlotFilePath).then(() => true).catch(() => false);
+
+
+                    if (hasDefaultSlotFile) {
+                        return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templatePartialsFolder, `${slotName}.mjml`)}" />`];
+                    }
                 }
 
                 return [`slots:${slotName}`, ""];
@@ -38,5 +40,5 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
         )
     );
 
-    return render(layoutFileContent, layoutSlotsContent, {}, {escape: (text) => text});
+    return render(layoutFileContent, layoutSlotsContent, {}, { escape: (text) => text });
 };

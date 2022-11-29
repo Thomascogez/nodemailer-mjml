@@ -42,17 +42,14 @@ export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplat
         }
     })();
 
-    const shouldRunMustacheCompiler = !!templateData && Object.keys(templateData ?? {}).length > 0;
-    const mustacheRenderedTemplate = shouldRunMustacheCompiler ? render(rawMjmlTemplate, templateData) : rawMjmlTemplate;
-    
-    const mjmlOutput = mjml2html(mustacheRenderedTemplate, {
+    const mjmlOutput =  mjml2html(rawMjmlTemplate, {
         filePath: mjmlTemplatePath,
         ...renderOptions.mjmlOptions
     });
-
     checkMjmlError(mjmlOutput);
-
+    
     const finalHtmlOutput = renderOptions.minifyHtmlOutput ? minify(mjmlOutput.html, renderOptions.htmlMinifierOptions) : mjmlOutput.html;
+    const shouldRunMustacheCompiler = !!templateData && Object.keys(templateData ?? {}).length > 0;
 
-    return finalHtmlOutput;
+    return shouldRunMustacheCompiler ? render(finalHtmlOutput, templateData) : finalHtmlOutput;
 };

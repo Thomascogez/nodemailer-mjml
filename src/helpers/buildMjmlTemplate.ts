@@ -31,7 +31,7 @@ export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplat
                 templateFolder: options.templateFolder,
                 templateLayoutName,
                 templateLayoutSlots: templateLayoutSlots ?? {},
-                templateSharedFolder: options.templateSharedFolder ?? "/partials"
+                templatePartialsFolder: options.templatePartialsFolder ?? "/partials"
             });
         }
 

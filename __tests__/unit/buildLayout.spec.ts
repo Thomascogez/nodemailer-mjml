@@ -9,7 +9,7 @@ describe("Build layout", () => {
             templateFolder: join(__dirname, "folderThatDoesNotExist"),
             templateLayoutName: "layout/layout-single-slot",
             templateLayoutSlots: {},
-            templateSharedFolder: "/shared"
+            templatePartialsFolder: "/shared"
         })).rejects.toThrow();
     });
 
@@ -18,7 +18,7 @@ describe("Build layout", () => {
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-that-does-not-exist",
             templateLayoutSlots: {},
-            templateSharedFolder: "/shared"
+            templatePartialsFolder: "/shared"
         })).rejects.toThrow();
     });
 
@@ -27,7 +27,7 @@ describe("Build layout", () => {
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-without-slots",
             templateLayoutSlots: {},
-            templateSharedFolder: "/shared"
+            templatePartialsFolder: "/shared"
         });
 
         const originalLayoutContent = await readFile(join(__dirname, "../resources/layout/layout-without-slots.mjml"), "utf8");
@@ -43,7 +43,7 @@ describe("Build layout", () => {
             templateLayoutSlots: {
                 header: "/includes/header",
             },
-            templateSharedFolder: "/shared"
+            templatePartialsFolder: "/shared"
         });
 
         const originalLayoutContent = await readFile(join(__dirname, "../resources/layout/layout-without-slots.mjml"), "utf8");
@@ -59,7 +59,7 @@ describe("Build layout", () => {
             templateLayoutSlots: {
                 header: "/include/header",
             },
-            templateSharedFolder: "/include"
+            templatePartialsFolder: "/include"
         });
 
         expect(buildedLayout).toBeDefined();
@@ -71,7 +71,7 @@ describe("Build layout", () => {
             templateFolder: join(__dirname, "../resources"),
             templateLayoutName: "layout/layout-single-slot",
             templateLayoutSlots: {},
-            templateSharedFolder: "/include"
+            templatePartialsFolder: "/include"
         });
 
         expect(buildedLayout).toBeDefined();
@@ -84,7 +84,7 @@ describe("Build layout", () => {
             templateLayoutName: "layout/layout-multiple-slots",
             templateLayoutSlots: {
             },
-            templateSharedFolder: "/include"
+            templatePartialsFolder: "/include"
         });
 
         expect(buildedLayout).toBeDefined();
@@ -106,7 +106,7 @@ describe("Build layout", () => {
                 customContent: "/include/content",
                 customFooter: "/include/customFooter"
             },
-            templateSharedFolder: "/include"
+            templatePartialsFolder: "/include"
         });
 
         expect(buildedLayout).toBeDefined();

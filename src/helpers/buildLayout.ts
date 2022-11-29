@@ -4,7 +4,7 @@ import { dirname, join } from "path";
 import { BuildLayoutTemplateOptions } from "../types/BuildLayoutTemplateOptions";
 
 export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
-    const { templateLayoutSlots, templateLayoutName, templateSharedFolder, templateFolder } = options;
+    const { templateLayoutSlots, templateLayoutName, templatePartialsFolder, templateFolder } = options;
 
     const layoutFilePath = join(templateFolder, `${templateLayoutName}.mjml`);
 
@@ -23,13 +23,13 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
                     return [`slots:${slotName}`, `<mj-include path="${slotContent}.mjml" />`];
                 }
 
-                const defaultSlotFilePath = join(templateFolder, templateSharedFolder, `${slotName}.mjml`);
+                const defaultSlotFilePath = join(templateFolder, templatePartialsFolder, `${slotName}.mjml`);
                 const hasDefaultSlotFile = await access(defaultSlotFilePath).then(() => true).catch(() => false);
                 
                 
                 if (hasDefaultSlotFile) {
                     const dirBackwardWalk = Array.from({length: dirname(`${templateLayoutName}.mjml`).split("/").length}, () => "../").join("");
-                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templateSharedFolder, `${slotName}.mjml`)}" />`];
+                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templatePartialsFolder, `${slotName}.mjml`)}" />`];
                 }
 
                 return [`slots:${slotName}`, ""];

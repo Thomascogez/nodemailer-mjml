@@ -138,7 +138,7 @@ describe("Nodemailer mjml", () => {
         it("should send an email with a layout with fallback header", async () => {
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
-                templateSharedFolder: "/include"
+                templatePartialsFolder: "/include"
             });
 
             await nodeMailerTransport.sendMail({

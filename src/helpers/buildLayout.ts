@@ -18,9 +18,11 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
     const layoutSlotsContent = Object.fromEntries(
         await Promise.all(
             layoutSlotsName.map(async (slotName) => {
+                const dirBackwardWalk = Array.from({length: dirname(`${templateLayoutName}.mjml`).split("/").length}, () => "../").join("");
+                
                 const slotContent = (templateLayoutSlots ?? {})[slotName];
                 if (slotContent) {
-                    return [`slots:${slotName}`, `<mj-include path="${slotContent}.mjml" />`];
+                    return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk,slotContent)}.mjml" />`];
                 }
 
                 const defaultSlotFilePath = join(templateFolder, templatePartialsFolder, `${slotName}.mjml`);
@@ -28,7 +30,6 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
                 
                 
                 if (hasDefaultSlotFile) {
-                    const dirBackwardWalk = Array.from({length: dirname(`${templateLayoutName}.mjml`).split("/").length}, () => "../").join("");
                     return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templatePartialsFolder, `${slotName}.mjml`)}" />`];
                 }
 

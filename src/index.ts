@@ -19,11 +19,10 @@ declare module 'nodemailer/lib/mailer' {
 
 const nodemailerMjmlPlugin = (options: IPluginOptions): PluginFunction => {
     return async (mail: MailMessage, callback: (err?: Error | null) => void) => {
-        if (mail.data.html || !mail.data?.templateName) return callback();
+        if (mail.data.html || (!mail.data?.templateName && !mail.data?.templateLayoutName)) return callback();
 
         try {
-            const { templateData, templateName } = mail.data;
-            const mailHtmlContent = await buildMjmlTemplate(options, { templateName, templateData });
+            const mailHtmlContent = await buildMjmlTemplate(options, mail.data);
 
             Object.assign(mail.data, { html: mailHtmlContent });
             return callback();

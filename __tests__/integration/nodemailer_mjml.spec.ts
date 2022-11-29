@@ -117,4 +117,37 @@ describe("Nodemailer mjml", () => {
             templateName: "test-include/test-include"
         });
     });
+
+    describe("Layout", () => {
+        it("should fail if layout does not exist", async () => {
+            const nodeMailerTransport = buildNodemailerTransport({
+                templateFolder: join(__dirname, "../resources")
+            });
+
+            await expect(
+                nodeMailerTransport.sendMail({
+                    from: '"John doe" <john.doe@example.com>',
+                    to: "doe.john@.com",
+                    subject: "Hello ✔",
+                    text: "Hello world?",
+                    templateLayoutName: "layout/layoutThatDoesNotExist"
+                })
+            ).rejects.toThrow();
+        });
+
+        it("should send an email with a layout with fallback header", async () => {
+            const nodeMailerTransport = buildNodemailerTransport({
+                templateFolder: join(__dirname, "../resources"),
+                templateSharedFolder: "/include"
+            });
+
+            await nodeMailerTransport.sendMail({
+                from: '"John doe" <john.doe@example.com>',
+                to: "doe.john@.com",
+                subject: "Hello ✔",
+                text: "Hello world?",
+                templateLayoutName: "layout/layout-single-slot"
+            });
+        });
+    });
 });

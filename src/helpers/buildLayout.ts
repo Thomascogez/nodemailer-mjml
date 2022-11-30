@@ -27,11 +27,12 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
 
                 if (templatePartialsFolder) {
                     const defaultSlotFilePath = join(templateFolder, templatePartialsFolder, `${slotName}.mjml`);
-                    const hasDefaultSlotFile = await access(defaultSlotFilePath).then(() => true).catch(() => false);
 
-
-                    if (hasDefaultSlotFile) {
+                    try {
+                        await access(defaultSlotFilePath);
                         return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, templatePartialsFolder, `${slotName}.mjml`)}" />`];
+                    } catch (error) { 
+                        /* do nothing */ 
                     }
                 }
 

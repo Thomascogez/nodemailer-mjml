@@ -18,8 +18,8 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
     const layoutSlotsContent = Object.fromEntries(
         await Promise.all(
             layoutSlotsName.map(async (slotName) => {
-                const dirBackwardWalk = Array.from({ length: dirname(`${templateLayoutName}.mjml`).split("/").length }, () => "../").join("");
-
+                const dirBackwardWalk = Array.from({ length: dirname(`${templateLayoutName}.mjml`).split("/").filter((path) => path !== ".").length }, () => "../").join("");
+                
                 const slotContent = (templateLayoutSlots ?? {})[slotName];
                 if (slotContent) {
                     return [`slots:${slotName}`, `<mj-include path="${join(dirBackwardWalk, slotContent)}.mjml" />`];

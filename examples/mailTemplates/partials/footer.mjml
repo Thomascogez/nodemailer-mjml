@@ -1,0 +1,8 @@
+<mj-column>
+    <mj-image align="center" padding="10px 25px" src="http://5vph.mj.am/img/5vph/b/1g8pi/0gzjm.png" target="_blank" width="202px"></mj-image>
+    <mj-social align="center">
+        <mj-social-element name="facebook"></mj-social-element>
+        <mj-social-element name="pinterest"></mj-social-element>
+        <mj-social-element name="instagram"></mj-social-element>
+    </mj-social>
+</mj-column>

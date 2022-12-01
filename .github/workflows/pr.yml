@@ -1,0 +1,13 @@
+name: Pull request 🧪
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Tests:checkout"
+        uses: actions/checkout@v2
+      
+      - name: "Tests:run"
+        run: docker-compose run tests yarn test

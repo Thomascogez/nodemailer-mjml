@@ -17,10 +17,17 @@ const sendTemplatedEmail = async () => {
         from: '"John doe" <john.doe@example.com>',
         to: "doe.john@.com",
         subject: "Welcome",
-        templateName: "hello",
-        templateData: {
-            userName: "John doe",
+        templateLayoutName: "layoutTemplate",
+        templateLayoutSlots: {
+            header: "partials/header",
+            content: "partials/content",
+            footer: "partials/footer",
         },
+        templateData: {
+            content: {
+                imageURL: "http://5vph.mj.am/img/5vph/b/1g8pi/068ys.png"
+            }
+        }
     });
 };
 

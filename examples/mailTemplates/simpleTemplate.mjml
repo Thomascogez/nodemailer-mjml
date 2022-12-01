@@ -1,0 +1,33 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image width="162px" src="{{companyLogoURL}}"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#f3f3f3">
+      <mj-column>
+        <mj-image width="170px" src="{{heroImageURL}}"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-text font-weight="bold" align="justify" font-size="24px" color="#000" font-family="helvetica">Article Title</mj-text>
+        <mj-text align="justify" font-size="15px" color="#000" font-family="helvetica">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</mj-text>
+        <mj-button align="left" background-color="#8ccaca" border-radius="40px" font-family="helvetica" font-size="12px">READ MORE</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-raw>
+        {{#articles}}
+      </mj-raw>
+      <mj-column width="30%">
+        <mj-image width="165px" src="{{articleImageURL}}"></mj-image>
+        <mj-text font-weight="bold" align="center" font-size="16px" color="#000" font-family="helvetica">{{articleName}}</mj-text>
+        <mj-text align="center" font-size="13px" color="#000" font-family="helvetica">{{articleDescription}}</mj-text>
+        <mj-button background-color="#8ccaca" border-radius="40px" font-family="helvetica" font-size="12px">READ MORE</mj-button>
+      </mj-column>
+      <mj-raw>
+        {{/articles}}
+      </mj-raw>
+    </mj-section>
+  </mj-body>
+</mjml>

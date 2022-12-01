@@ -1,0 +1,3 @@
+<mj-column>
+  <mj-image align="center" padding-bottom="0px" padding-left="0px" padding-right="0px" padding-top="0px" padding="10px 25px" src="{{content.imageURL}}" target="_blank" width="600px"></mj-image>
+</mj-column>

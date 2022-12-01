@@ -1,0 +1,6 @@
+<mj-column>
+  <mj-image align="center" padding="10px 25px" src="http://5vph.mj.am/img/5vph/b/1g8pi/0gztq.png" target="_blank" width="214px"></mj-image>
+  <mj-text align="left" color="#55575d" font-family="Arial, sans-serif" font-size="13px" line-height="22px" padding-bottom="15px" padding-top="0px" padding="10px 25px">
+    <p style="text-align: center; margin: 10px 0;color:#151e23;font-size:14px;font-family:Georgia,Helvetica,Arial,sans-serif">Product | Concept | Contact</p>
+  </mj-text>
+</mj-column>

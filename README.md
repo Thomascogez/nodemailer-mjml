@@ -181,7 +181,7 @@ docker compose run --rm tests yarn test
 
 This software uses the following open source packages:
 
-- [MJML](ttps://github.com/mjmlio/)
+- [MJML](https://github.com/mjmlio/)
 - [nodemailer](https://github.com/nodemailer/nodemailer)
 - [mustache](https://www.npmjs.com/package/mustache)
 - [html-minifier](https://www.npmjs.com/package/html-minifier)

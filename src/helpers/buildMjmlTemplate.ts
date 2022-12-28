@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 import { minify } from "html-minifier";
 import mjml2html from "mjml";
 import { render } from "mustache";
-import { dirname, join } from "path";
+import { join } from "path";
 
 import { defaultPluginOptions } from '../constants/defaultPluginOptions';
 import { checkMjmlError } from "../helpers/checkMjmlError";

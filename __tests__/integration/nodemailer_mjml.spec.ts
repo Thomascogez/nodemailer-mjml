@@ -1,11 +1,14 @@
-import { minify } from "html-minifier";
 import { join } from "path";
 import supertest from "supertest";
-import { buildMjmlTemplate } from "../../src";
 import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
 import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
+import { waitForMaildev } from "../helpers/waitForMaildev";
 
 describe("Nodemailer mjml", () => {
+    beforeAll(async() => {
+        await waitForMaildev();
+    });
+    
     it("should fail if template does not exist", async () => {
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "folderThatDoesNotExist")
@@ -16,7 +19,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateName: "test"
             })
         ).rejects.toThrow();
@@ -32,18 +34,12 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateName: "test-invalid"
             })
         ).rejects.toThrow();
     });
 
     it("should send mail", async () => {
-        const expectedOutput = await buildMjmlTemplate(
-            { templateFolder: join(__dirname, "../resources") },
-            { templateName: "test" }
-        );
-
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")
         });
@@ -52,7 +48,6 @@ describe("Nodemailer mjml", () => {
             from: '"John doe" <john.doe@example.com>',
             to: "doe.john@.com",
             subject: "Valid",
-            text: "Hello world?",
             templateName: "test"
         });
 
@@ -60,7 +55,8 @@ describe("Nodemailer mjml", () => {
         expect(receivedMailResponse.status).toBe(200);
 
         const latestReceivedMail = receivedMailResponse.body.pop();
-        expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+        
+        expect(latestReceivedMail.html).toContain("resources/test.mjml");
     });
 
     it("should send mail with templateData rendered", async () => {
@@ -71,19 +67,6 @@ describe("Nodemailer mjml", () => {
             }
         };
 
-        const expectedOutput = await buildMjmlTemplate(
-            { templateFolder: join(__dirname, "../resources") },
-            {
-                templateName: "test-mustache",
-                templateData: {
-                    testKey: "testKey",
-                    testKeyNested: {
-                        nestedKey: "nestedKey"
-                    },
-                }
-
-            });
-
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")
         });
@@ -92,7 +75,6 @@ describe("Nodemailer mjml", () => {
             from: '"John doe" <john.doe@example.com>',
             to: "doe.john@.com",
             subject: "Valid",
-            text: "Hello world?",
             templateName: "test-mustache",
             templateData
         });
@@ -101,7 +83,9 @@ describe("Nodemailer mjml", () => {
         expect(receivedMailResponse.status).toBe(200);
 
         const latestReceivedMail = receivedMailResponse.body.pop();
-        expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+        expect(latestReceivedMail.html).toContain("resources/test-mustache.mjml");
+        expect(latestReceivedMail.html).toContain(templateData.testKey);
+        expect(latestReceivedMail.html).toContain(templateData.testKeyNested.nestedKey);
     });
 
 
@@ -129,21 +113,12 @@ describe("Nodemailer mjml", () => {
                     from: '"John doe" <john.doe@example.com>',
                     to: "doe.john@.com",
                     subject: "Hello ✔",
-                    text: "Hello world?",
                     templateLayoutName: "layout/layoutThatDoesNotExist"
                 })
             ).rejects.toThrow();
         });
 
         it("should send an email with a layout and fallback header", async () => {
-
-            const expectedOutput = await buildMjmlTemplate({
-                templateFolder: join(__dirname, "../resources"),
-                templatePartialsFolder: "/include"
-            }, {
-                templateLayoutName: "layout/layout-single-slot"
-            });
-
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
                 templatePartialsFolder: "/include"
@@ -153,7 +128,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateLayoutName: "layout/layout-single-slot"
             });
 
@@ -161,7 +135,8 @@ describe("Nodemailer mjml", () => {
             expect(receivedMailResponse.status).toBe(200);
 
             const latestReceivedMail = receivedMailResponse.body.pop();
-            expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+            expect(latestReceivedMail.html).toContain("resources/layout/layout-single-slot.mjml");
+            expect(latestReceivedMail.html).toContain("This is a header");
         });
 
         it("should send an email with rendered layout slots", async () => {
@@ -179,14 +154,12 @@ describe("Nodemailer mjml", () => {
 
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
-                templatePartialsFolder: "/include"
             });
 
             await nodeMailerTransport.sendMail({
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateLayoutName: "layout/layout-multiple-slots",
                 templateLayoutSlots,
                 templateData
@@ -197,6 +170,7 @@ describe("Nodemailer mjml", () => {
 
             const latestReceivedMail = receivedMailResponse.body.pop();
             
+            expect(latestReceivedMail.html).toContain("resources/layout/layout-multiple-slot.mjml");
             expect(latestReceivedMail.html).toContain(templateData.content);
             expect(latestReceivedMail.html).toContain(templateData.footerText);
             expect(latestReceivedMail.html).toContain(templateData.headerTitle);

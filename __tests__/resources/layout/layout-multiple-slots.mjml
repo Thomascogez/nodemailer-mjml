@@ -8,6 +8,7 @@
     <mj-section background-color="#f3f3f3">
       <mj-column>
         <mj-image width="170px" src="http://i.imgur.com/nwNZ0TW.png"></mj-image>
+        <mj-text font-weight="bold" align="justify" font-size="24px" color="#000" font-family="helvetica">resources/layout/layout-multiple-slot.mjml</mj-text>
       </mj-column>
       <mj-column>
         {{ slots:customContent }}

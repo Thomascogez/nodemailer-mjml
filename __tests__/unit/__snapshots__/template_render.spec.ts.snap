@@ -105,6 +105,14 @@ exports[`Template render Default template With template data should send mail us
                 </td>
               </tr>
             
+              <tr>
+                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:helvetica;font-size:16px;font-weight:bold;line-height:1;text-align:center;color:#000000;">resources/test-mustache.mjml</div>
+    
+                </td>
+              </tr>
+            
         </tbody>
       </table>
     
@@ -550,6 +558,18 @@ exports[`Template render Default template With template data should send mail us
           </tr>
         </tbody>
       </table>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:16px;font-weight:bold;line-height:1;text-align:center;color:#000000;"
+      >resources/test-mustache.mjml</div>
     
                 </td>
               </tr>
@@ -1103,6 +1123,14 @@ exports[`Template render Default template Without template data should send mail
                 </td>
               </tr>
             
+              <tr>
+                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:helvetica;font-size:16px;font-weight:bold;line-height:1;text-align:center;color:#000000;">resources/test.mjml</div>
+    
+                </td>
+              </tr>
+            
         </tbody>
       </table>
     
@@ -1548,6 +1576,18 @@ exports[`Template render Default template Without template data should send mail
           </tr>
         </tbody>
       </table>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:16px;font-weight:bold;line-height:1;text-align:center;color:#000000;"
+      >resources/test.mjml</div>
     
                 </td>
               </tr>
@@ -2170,6 +2210,14 @@ exports[`Template render Layout template With template data With fallback slots 
               <tr>
                 <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
+      <div style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;">resources/layout/layout-single-slot.mjml</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
       <div style="font-family:helvetica;font-size:15px;line-height:1;text-align:justify;color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</div>
     
                 </td>
@@ -2630,6 +2678,18 @@ exports[`Template render Layout template With template data With fallback slots 
       <div
          style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
       >Article Title</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
+      >resources/layout/layout-single-slot.mjml</div>
     
                 </td>
               </tr>
@@ -3114,6 +3174,14 @@ exports[`Template render Layout template With template data Without fallback slo
               <tr>
                 <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
+      <div style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;">resources/layout/layout-single-slot.mjml</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
       <div style="font-family:helvetica;font-size:15px;line-height:1;text-align:justify;color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</div>
     
                 </td>
@@ -3514,6 +3582,18 @@ exports[`Template render Layout template With template data Without fallback slo
       <div
          style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
       >Article Title</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
+      >resources/layout/layout-single-slot.mjml</div>
     
                 </td>
               </tr>
@@ -4046,6 +4126,14 @@ exports[`Template render Layout template Without template data With fallback slo
               <tr>
                 <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
+      <div style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;">resources/layout/layout-single-slot.mjml</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
       <div style="font-family:helvetica;font-size:15px;line-height:1;text-align:justify;color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</div>
     
                 </td>
@@ -4506,6 +4594,18 @@ exports[`Template render Layout template Without template data With fallback slo
       <div
          style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
       >Article Title</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
+      >resources/layout/layout-single-slot.mjml</div>
     
                 </td>
               </tr>
@@ -4990,6 +5090,14 @@ exports[`Template render Layout template Without template data Without fallback 
               <tr>
                 <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
+      <div style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;">resources/layout/layout-single-slot.mjml</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
       <div style="font-family:helvetica;font-size:15px;line-height:1;text-align:justify;color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</div>
     
                 </td>
@@ -5390,6 +5498,18 @@ exports[`Template render Layout template Without template data Without fallback 
       <div
          style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
       >Article Title</div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
+                   align="justify" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:helvetica;font-size:24px;font-weight:bold;line-height:1;text-align:justify;color:#000000;"
+      >resources/layout/layout-single-slot.mjml</div>
     
                 </td>
               </tr>

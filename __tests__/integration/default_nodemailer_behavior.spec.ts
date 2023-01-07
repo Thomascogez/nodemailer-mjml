@@ -2,7 +2,13 @@ import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
 import supertest from "supertest";
 import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
 import { join } from "path";
+import { waitForMaildev } from "../helpers/waitForMaildev";
+
 describe("Default nodemailer behavior", () => {
+    beforeAll(async () => {
+        await waitForMaildev();
+    });
+
     it("should send a normal html mail without failing", async () => {
         const nodeMailerTransport = buildNodemailerTransport({ templateFolder: join(__dirname, "../resources") });
 
@@ -37,7 +43,7 @@ describe("Default nodemailer behavior", () => {
         expect(receivedMailResponse.status).toBe(200);
 
         const latestReceivedMail = receivedMailResponse.body.pop();
-        
+
         expect(latestReceivedMail.text).toBe(`${mailTextContent}\n`);
     });
 });

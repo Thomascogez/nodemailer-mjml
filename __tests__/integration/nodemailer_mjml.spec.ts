@@ -4,8 +4,13 @@ import supertest from "supertest";
 import { buildMjmlTemplate } from "../../src";
 import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
 import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
+import { waitForMaildev } from "../helpers/waitForMaildev";
 
 describe("Nodemailer mjml", () => {
+    beforeAll(async() => {
+        await waitForMaildev();
+    });
+    
     it("should fail if template does not exist", async () => {
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "folderThatDoesNotExist")
@@ -179,7 +184,6 @@ describe("Nodemailer mjml", () => {
 
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
-                templatePartialsFolder: "/include"
             });
 
             await nodeMailerTransport.sendMail({

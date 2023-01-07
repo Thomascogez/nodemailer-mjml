@@ -183,13 +183,13 @@ describe("Template render", () => {
                     };
 
                     const templateLayoutSlots = {
+                        customHeader: "include/header-mustache",
                         customContent: "include/content-mustache",
                         customFooter: "include/footer-mustache",
                     };
 
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
-                        templatePartialsFolder: "/include",
                         minifyHtmlOutput: false
                     }, {
                         templateLayoutName: "layout/layout-single-slot",
@@ -208,13 +208,13 @@ describe("Template render", () => {
                     };
 
                     const templateLayoutSlots = {
+                        customHeader: "include/header-mustache",
                         customContent: "include/content-mustache",
                         customFooter: "include/footer-mustache",
                     };
 
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
-                        templatePartialsFolder: "/include",
                         minifyHtmlOutput: true
                     }, {
                         templateLayoutName: "layout/layout-single-slot",

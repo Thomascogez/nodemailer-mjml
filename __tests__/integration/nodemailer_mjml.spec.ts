@@ -21,7 +21,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateName: "test"
             })
         ).rejects.toThrow();
@@ -37,7 +36,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateName: "test-invalid"
             })
         ).rejects.toThrow();
@@ -57,7 +55,6 @@ describe("Nodemailer mjml", () => {
             from: '"John doe" <john.doe@example.com>',
             to: "doe.john@.com",
             subject: "Valid",
-            text: "Hello world?",
             templateName: "test"
         });
 
@@ -97,7 +94,6 @@ describe("Nodemailer mjml", () => {
             from: '"John doe" <john.doe@example.com>',
             to: "doe.john@.com",
             subject: "Valid",
-            text: "Hello world?",
             templateName: "test-mustache",
             templateData
         });
@@ -134,7 +130,6 @@ describe("Nodemailer mjml", () => {
                     from: '"John doe" <john.doe@example.com>',
                     to: "doe.john@.com",
                     subject: "Hello ✔",
-                    text: "Hello world?",
                     templateLayoutName: "layout/layoutThatDoesNotExist"
                 })
             ).rejects.toThrow();
@@ -158,7 +153,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateLayoutName: "layout/layout-single-slot"
             });
 
@@ -190,7 +184,6 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                text: "Hello world?",
                 templateLayoutName: "layout/layout-multiple-slots",
                 templateLayoutSlots,
                 templateData

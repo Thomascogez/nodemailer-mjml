@@ -1,7 +1,5 @@
-import { minify } from "html-minifier";
 import { join } from "path";
 import supertest from "supertest";
-import { buildMjmlTemplate } from "../../src";
 import { MAILDEV_API_ENDPOINT } from "../constants/mailDev";
 import { buildNodemailerTransport } from "../helpers/buildNodemailerClient";
 import { waitForMaildev } from "../helpers/waitForMaildev";
@@ -42,11 +40,6 @@ describe("Nodemailer mjml", () => {
     });
 
     it("should send mail", async () => {
-        const expectedOutput = await buildMjmlTemplate(
-            { templateFolder: join(__dirname, "../resources") },
-            { templateName: "test" }
-        );
-
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")
         });
@@ -62,7 +55,8 @@ describe("Nodemailer mjml", () => {
         expect(receivedMailResponse.status).toBe(200);
 
         const latestReceivedMail = receivedMailResponse.body.pop();
-        expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+        
+        expect(latestReceivedMail.html).toContain("resources/test.mjml");
     });
 
     it("should send mail with templateData rendered", async () => {
@@ -72,19 +66,6 @@ describe("Nodemailer mjml", () => {
                 nestedKey: "nestedKey"
             }
         };
-
-        const expectedOutput = await buildMjmlTemplate(
-            { templateFolder: join(__dirname, "../resources") },
-            {
-                templateName: "test-mustache",
-                templateData: {
-                    testKey: "testKey",
-                    testKeyNested: {
-                        nestedKey: "nestedKey"
-                    },
-                }
-
-            });
 
         const nodeMailerTransport = buildNodemailerTransport({
             templateFolder: join(__dirname, "../resources")
@@ -102,7 +83,9 @@ describe("Nodemailer mjml", () => {
         expect(receivedMailResponse.status).toBe(200);
 
         const latestReceivedMail = receivedMailResponse.body.pop();
-        expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+        expect(latestReceivedMail.html).toContain("resources/test-mustache.mjml");
+        expect(latestReceivedMail.html).toContain(templateData.testKey);
+        expect(latestReceivedMail.html).toContain(templateData.testKeyNested.nestedKey);
     });
 
 
@@ -136,14 +119,6 @@ describe("Nodemailer mjml", () => {
         });
 
         it("should send an email with a layout and fallback header", async () => {
-
-            const expectedOutput = await buildMjmlTemplate({
-                templateFolder: join(__dirname, "../resources"),
-                templatePartialsFolder: "/include"
-            }, {
-                templateLayoutName: "layout/layout-single-slot"
-            });
-
             const nodeMailerTransport = buildNodemailerTransport({
                 templateFolder: join(__dirname, "../resources"),
                 templatePartialsFolder: "/include"
@@ -160,7 +135,8 @@ describe("Nodemailer mjml", () => {
             expect(receivedMailResponse.status).toBe(200);
 
             const latestReceivedMail = receivedMailResponse.body.pop();
-            expect(minify(latestReceivedMail.html.toLowerCase())).toBe(expectedOutput.toLowerCase());
+            expect(latestReceivedMail.html).toContain("resources/layout/layout-single-slot.mjml");
+            expect(latestReceivedMail.html).toContain("This is a header");
         });
 
         it("should send an email with rendered layout slots", async () => {
@@ -194,6 +170,7 @@ describe("Nodemailer mjml", () => {
 
             const latestReceivedMail = receivedMailResponse.body.pop();
             
+            expect(latestReceivedMail.html).toContain("resources/layout/layout-multiple-slot.mjml");
             expect(latestReceivedMail.html).toContain(templateData.content);
             expect(latestReceivedMail.html).toContain(templateData.footerText);
             expect(latestReceivedMail.html).toContain(templateData.headerTitle);

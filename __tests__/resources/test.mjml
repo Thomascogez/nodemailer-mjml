@@ -3,6 +3,7 @@
     <mj-section>
       <mj-column>
         <mj-image width="162px" src="http://i.imgur.com/6wwIX3R.png"></mj-image>
+        <mj-text font-weight="bold" align="center" font-size="16px" color="#000" font-family="helvetica">resources/test.mjml</mj-text>
       </mj-column>
     </mj-section>
     <mj-section background-color="#f3f3f3">

@@ -7,6 +7,7 @@
       </mj-column>
       <mj-column>
         <mj-text font-weight="bold" align="justify" font-size="24px" color="#000" font-family="helvetica">Article Title</mj-text>
+        <mj-text font-weight="bold" align="justify" font-size="24px" color="#000" font-family="helvetica">resources/layout/layout-single-slot.mjml</mj-text>
         <mj-text align="justify" font-size="15px" color="#000" font-family="helvetica">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet ipsum consequat.</mj-text>
         <mj-button align="left" background-color="#8ccaca" border-radius="40px" font-family="helvetica" font-size="12px">READ MORE</mj-button>
       </mj-column>

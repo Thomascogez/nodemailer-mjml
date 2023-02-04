@@ -10,7 +10,7 @@ export const waitFor = (waitingTimeoutInMs: number): Promise<void> => {
 
 export const waitForMaildev = (): Promise<void> => {
     return new Promise((resolve, reject) => {
-        const testMaildevConnection = async (retries = 10) => {
+        const testMaildevConnection = async (retries = 10): Promise<void> => {
             if (retries <= 0) {
                 return reject();
             }
@@ -33,7 +33,7 @@ export const waitForMaildev = (): Promise<void> => {
                 throw new Error("Maildev not ready");
             } catch (error) {
                 await waitFor(1000);
-                testMaildevConnection(retries - 1);
+                return await testMaildevConnection(retries - 1);
             }
         };
         testMaildevConnection();

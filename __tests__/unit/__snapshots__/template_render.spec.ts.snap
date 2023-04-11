@@ -4,9 +4,7 @@ exports[`Template render Default template With template data should send mail us
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -54,7 +52,7 @@ exports[`Template render Default template With template data should send mail us
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -95,7 +93,7 @@ exports[`Template render Default template With template data should send mail us
           <tr>
             <td style="width:162px;">
               
-      <img height="auto" src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162">
+      <img src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162" height="auto">
     
             </td>
           </tr>
@@ -151,7 +149,7 @@ exports[`Template render Default template With template data should send mail us
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -245,7 +243,7 @@ exports[`Template render Default template With template data should send mail us
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -309,7 +307,7 @@ exports[`Template render Default template With template data should send mail us
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -373,7 +371,7 @@ exports[`Template render Default template With template data should send mail us
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -445,9 +443,7 @@ exports[`Template render Default template With template data should send mail us
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -495,7 +491,7 @@ exports[`Template render Default template With template data should send mail us
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -551,7 +547,7 @@ exports[`Template render Default template With template data should send mail us
             <td  style="width:162px;">
               
       <img
-         height="auto" src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162"
+         src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162" height="auto"
       />
     
             </td>
@@ -625,7 +621,7 @@ exports[`Template render Default template With template data should send mail us
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -753,7 +749,7 @@ exports[`Template render Default template With template data should send mail us
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -843,7 +839,7 @@ exports[`Template render Default template With template data should send mail us
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -933,7 +929,7 @@ exports[`Template render Default template With template data should send mail us
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -1022,9 +1018,7 @@ exports[`Template render Default template Without template data should send mail
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -1072,7 +1066,7 @@ exports[`Template render Default template Without template data should send mail
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -1113,7 +1107,7 @@ exports[`Template render Default template Without template data should send mail
           <tr>
             <td style="width:162px;">
               
-      <img height="auto" src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162">
+      <img src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162" height="auto">
     
             </td>
           </tr>
@@ -1169,7 +1163,7 @@ exports[`Template render Default template Without template data should send mail
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -1263,7 +1257,7 @@ exports[`Template render Default template Without template data should send mail
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -1327,7 +1321,7 @@ exports[`Template render Default template Without template data should send mail
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -1391,7 +1385,7 @@ exports[`Template render Default template Without template data should send mail
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -1463,9 +1457,7 @@ exports[`Template render Default template Without template data should send mail
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -1513,7 +1505,7 @@ exports[`Template render Default template Without template data should send mail
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -1569,7 +1561,7 @@ exports[`Template render Default template Without template data should send mail
             <td  style="width:162px;">
               
       <img
-         height="auto" src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162"
+         src="http://i.imgur.com/6wwIX3R.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="162" height="auto"
       />
     
             </td>
@@ -1643,7 +1635,7 @@ exports[`Template render Default template Without template data should send mail
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -1771,7 +1763,7 @@ exports[`Template render Default template Without template data should send mail
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -1861,7 +1853,7 @@ exports[`Template render Default template Without template data should send mail
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -1951,7 +1943,7 @@ exports[`Template render Default template Without template data should send mail
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -2040,9 +2032,7 @@ exports[`Template render Layout template With template data With fallback slots 
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -2098,7 +2088,7 @@ exports[`Template render Layout template With template data With fallback slots 
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -2177,7 +2167,7 @@ exports[`Template render Layout template With template data With fallback slots 
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -2279,7 +2269,7 @@ exports[`Template render Layout template With template data With fallback slots 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -2343,7 +2333,7 @@ exports[`Template render Layout template With template data With fallback slots 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -2407,7 +2397,7 @@ exports[`Template render Layout template With template data With fallback slots 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -2479,9 +2469,7 @@ exports[`Template render Layout template With template data With fallback slots 
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -2537,7 +2525,7 @@ exports[`Template render Layout template With template data With fallback slots 
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -2643,7 +2631,7 @@ exports[`Template render Layout template With template data With fallback slots 
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -2783,7 +2771,7 @@ exports[`Template render Layout template With template data With fallback slots 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -2873,7 +2861,7 @@ exports[`Template render Layout template With template data With fallback slots 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -2963,7 +2951,7 @@ exports[`Template render Layout template With template data With fallback slots 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -3052,9 +3040,7 @@ exports[`Template render Layout template With template data Without fallback slo
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -3100,7 +3086,7 @@ exports[`Template render Layout template With template data Without fallback slo
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -3141,7 +3127,7 @@ exports[`Template render Layout template With template data Without fallback slo
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -3243,7 +3229,7 @@ exports[`Template render Layout template With template data Without fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -3307,7 +3293,7 @@ exports[`Template render Layout template With template data Without fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -3371,7 +3357,7 @@ exports[`Template render Layout template With template data Without fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -3443,9 +3429,7 @@ exports[`Template render Layout template With template data Without fallback slo
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -3491,7 +3475,7 @@ exports[`Template render Layout template With template data Without fallback slo
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -3547,7 +3531,7 @@ exports[`Template render Layout template With template data Without fallback slo
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -3687,7 +3671,7 @@ exports[`Template render Layout template With template data Without fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -3777,7 +3761,7 @@ exports[`Template render Layout template With template data Without fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -3867,7 +3851,7 @@ exports[`Template render Layout template With template data Without fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -3956,9 +3940,7 @@ exports[`Template render Layout template Without template data With fallback slo
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -4014,7 +3996,7 @@ exports[`Template render Layout template Without template data With fallback slo
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -4093,7 +4075,7 @@ exports[`Template render Layout template Without template data With fallback slo
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -4195,7 +4177,7 @@ exports[`Template render Layout template Without template data With fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -4259,7 +4241,7 @@ exports[`Template render Layout template Without template data With fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -4323,7 +4305,7 @@ exports[`Template render Layout template Without template data With fallback slo
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -4395,9 +4377,7 @@ exports[`Template render Layout template Without template data With fallback slo
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -4453,7 +4433,7 @@ exports[`Template render Layout template Without template data With fallback slo
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -4559,7 +4539,7 @@ exports[`Template render Layout template Without template data With fallback slo
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -4699,7 +4679,7 @@ exports[`Template render Layout template Without template data With fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -4789,7 +4769,7 @@ exports[`Template render Layout template Without template data With fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -4879,7 +4859,7 @@ exports[`Template render Layout template Without template data With fallback slo
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -4968,9 +4948,7 @@ exports[`Template render Layout template Without template data Without fallback 
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -5016,7 +4994,7 @@ exports[`Template render Layout template Without template data Without fallback 
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -5057,7 +5035,7 @@ exports[`Template render Layout template Without template data Without fallback 
           <tr>
             <td style="width:170px;">
               
-      <img height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170">
+      <img src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto">
     
             </td>
           </tr>
@@ -5159,7 +5137,7 @@ exports[`Template render Layout template Without template data Without fallback 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -5223,7 +5201,7 @@ exports[`Template render Layout template Without template data Without fallback 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -5287,7 +5265,7 @@ exports[`Template render Layout template Without template data Without fallback 
           <tr>
             <td style="width:150px;">
               
-      <img height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150">
+      <img src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto">
     
             </td>
           </tr>
@@ -5359,9 +5337,7 @@ exports[`Template render Layout template Without template data Without fallback 
 "<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
-    <title>
-      
-    </title>
+    <title></title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -5407,7 +5383,7 @@ exports[`Template render Layout template Without template data Without fallback 
     
     
 
-    @media only screen and (max-width:480px) {
+    @media only screen and (max-width:479px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -5463,7 +5439,7 @@ exports[`Template render Layout template Without template data Without fallback 
             <td  style="width:170px;">
               
       <img
-         height="auto" src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170"
+         src="http://i.imgur.com/nwNZ0TW.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="170" height="auto"
       />
     
             </td>
@@ -5603,7 +5579,7 @@ exports[`Template render Layout template Without template data Without fallback 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/2aRBc7u.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -5693,7 +5669,7 @@ exports[`Template render Layout template Without template data Without fallback 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/L7Q88fd.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>
@@ -5783,7 +5759,7 @@ exports[`Template render Layout template Without template data Without fallback 
             <td  style="width:150px;">
               
       <img
-         height="auto" src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150"
+         src="http://i.imgur.com/0NBMznR.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="150" height="auto"
       />
     
             </td>

@@ -11,7 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/html-minifier": "^4.0.2",
-    "@types/jest": "^29.5.0",
+    "@types/jest": "^29.5.1",
     "@types/mjml": "^4.7.1",
     "@types/mustache": "^4.2.2",
     "@types/node": "^18.16.0",

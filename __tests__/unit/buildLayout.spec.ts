@@ -72,10 +72,12 @@ describe("Build layout", () => {
             templateLayoutName: "layout/layout-single-slot",
             templateLayoutSlots: {},
             templatePartialsFolder: "/include"
-        });
+        }, {templateData: "templateData"});
 
+        
         expect(buildedLayout).toBeDefined();
         expect(buildedLayout).toContain(`<mj-include path="../include/header.mjml" />`);
+        expect(buildedLayout).toContain("templateData");
     });
 
     it("should compile a layout file with slots and should not fallback to default slots since templatePartialsFolder is not defined", async () => {

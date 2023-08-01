@@ -3,7 +3,7 @@ import { render } from "mustache";
 import { dirname, join } from "path";
 import { BuildLayoutTemplateOptions } from "../types/BuildLayoutTemplateOptions";
 
-export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
+export const buildLayout = async (options: BuildLayoutTemplateOptions, templateData = {}) => {
     const { templateLayoutSlots, templateLayoutName, templatePartialsFolder, templateFolder } = options;
 
     const layoutFilePath = join(templateFolder, `${templateLayoutName}.mjml`);
@@ -41,5 +41,5 @@ export const buildLayout = async (options: BuildLayoutTemplateOptions) => {
         )
     );
 
-    return render(layoutFileContent, layoutSlotsContent, {}, { escape: (text) => text });
+    return render(layoutFileContent, {...layoutSlotsContent, ...templateData}, {}, { escape: (text) => text,  });
 };

@@ -32,7 +32,7 @@ export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplat
                 templateLayoutName,
                 templateLayoutSlots: templateLayoutSlots ?? {},
                 templatePartialsFolder: options.templatePartialsFolder
-            });
+            }, templateData);
         }
 
         try {

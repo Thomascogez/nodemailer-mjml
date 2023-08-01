@@ -2160,6 +2160,14 @@ exports[`Template render Layout template With template data With fallback slots 
         <tbody>
           
               <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"></div>
+    
+                </td>
+              </tr>
+            
+              <tr>
                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
@@ -2620,6 +2628,18 @@ exports[`Template render Layout template With template data With fallback slots 
           
               <tr>
                 <td
+                   align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"
+      ></div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
                    align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"
                 >
                   
@@ -3069,6 +3089,14 @@ exports[`Template render Layout template With template data Without fallback slo
     </style>
     <![endif]-->
     
+      <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+        </style>
+      <!--<![endif]-->
+
+    
     
     <style type="text/css">
       @media only screen and (min-width:480px) {
@@ -3119,6 +3147,14 @@ exports[`Template render Layout template With template data Without fallback slo
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
         <tbody>
           
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"></div>
+    
+                </td>
+              </tr>
+            
               <tr>
                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
@@ -3458,6 +3494,14 @@ exports[`Template render Layout template With template data Without fallback slo
     </style>
     <![endif]-->
     
+      <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+        </style>
+      <!--<![endif]-->
+
+    
     
     <style type="text/css">
       @media only screen and (min-width:480px) {
@@ -3518,6 +3562,18 @@ exports[`Template render Layout template With template data Without fallback slo
       >
         <tbody>
           
+              <tr>
+                <td
+                   align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"
+      ></div>
+    
+                </td>
+              </tr>
+            
               <tr>
                 <td
                    align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"
@@ -4068,6 +4124,14 @@ exports[`Template render Layout template Without template data With fallback slo
         <tbody>
           
               <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"></div>
+    
+                </td>
+              </tr>
+            
+              <tr>
                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
@@ -4528,6 +4592,18 @@ exports[`Template render Layout template Without template data With fallback slo
           
               <tr>
                 <td
+                   align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"
+      ></div>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td
                    align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"
                 >
                   
@@ -4977,6 +5053,14 @@ exports[`Template render Layout template Without template data Without fallback 
     </style>
     <![endif]-->
     
+      <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+        </style>
+      <!--<![endif]-->
+
+    
     
     <style type="text/css">
       @media only screen and (min-width:480px) {
@@ -5027,6 +5111,14 @@ exports[`Template render Layout template Without template data Without fallback 
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
         <tbody>
           
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"></div>
+    
+                </td>
+              </tr>
+            
               <tr>
                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
@@ -5366,6 +5458,14 @@ exports[`Template render Layout template Without template data Without fallback 
     </style>
     <![endif]-->
     
+      <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+        </style>
+      <!--<![endif]-->
+
+    
     
     <style type="text/css">
       @media only screen and (min-width:480px) {
@@ -5426,6 +5526,18 @@ exports[`Template render Layout template Without template data Without fallback 
       >
         <tbody>
           
+              <tr>
+                <td
+                   align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;"
+                >
+                  
+      <div
+         style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"
+      ></div>
+    
+                </td>
+              </tr>
+            
               <tr>
                 <td
                    align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;"

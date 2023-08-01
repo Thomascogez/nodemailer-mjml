@@ -128,7 +128,10 @@ describe("Nodemailer mjml", () => {
                 from: '"John doe" <john.doe@example.com>',
                 to: "doe.john@.com",
                 subject: "Hello ✔",
-                templateLayoutName: "layout/layout-single-slot"
+                templateLayoutName: "layout/layout-single-slot",
+                templateData: {
+                    templateData: "templateData"
+                }
             });
 
             const receivedMailResponse = await supertest(MAILDEV_API_ENDPOINT).get("/email");
@@ -137,6 +140,7 @@ describe("Nodemailer mjml", () => {
             const latestReceivedMail = receivedMailResponse.body.pop();
             expect(latestReceivedMail.html).toContain("resources/layout/layout-single-slot.mjml");
             expect(latestReceivedMail.html).toContain("This is a header");
+            expect(latestReceivedMail.html).toContain("templateData");
         });
 
         it("should send an email with rendered layout slots", async () => {

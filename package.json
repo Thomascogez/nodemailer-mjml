@@ -16,7 +16,7 @@
     "@types/mustache": "^4.2.2",
     "@types/node": "^20.6.5",
     "@types/nodemailer": "^6.4.11",
-    "@types/supertest": "^2.0.12",
+    "@types/supertest": "^2.0.13",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "eslint": "^8.50.0",

@@ -14,7 +14,7 @@
     "@types/jest": "^29.5.5",
     "@types/mjml": "^4.7.2",
     "@types/mustache": "^4.2.3",
-    "@types/node": "^20.8.6",
+    "@types/node": "^20.8.7",
     "@types/nodemailer": "^6.4.11",
     "@types/supertest": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^5.62.0",

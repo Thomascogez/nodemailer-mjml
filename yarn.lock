@@ -710,10 +710,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/html-minifier@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@types/html-minifier/-/html-minifier-4.0.3.tgz#614ad1112ea2fa41a1af1eb02ea3e43f3ddfff9f"
-  integrity sha512-e55KfPv+cXjd2AXwkuVfMw/hcJipNoS+JML+z3ijqzMHgc6F2iviWSEUx5tXQ6Yu5UtYtLH35ae2ftFsRJTmLA==
+"@types/html-minifier@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/html-minifier/-/html-minifier-4.0.4.tgz#4d8501885918af2f74d9fbfb86acabca44af7306"
+  integrity sha512-kvzPbhN6CM+zFdOmLaGKF1DUnn9oYZteTiltHRFhsnj3vcnCZj1qVA0x1E7FTZvLT8e4WsHTSXk/0YV2NgOWOw==
   dependencies:
     "@types/clean-css" "*"
     "@types/relateurl" "*"

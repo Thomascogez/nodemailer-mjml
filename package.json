@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/html-minifier": "^4.0.4",
     "@types/jest": "^29.5.7",
-    "@types/mjml": "^4.7.3",
+    "@types/mjml": "^4.7.4",
     "@types/mustache": "^4.2.4",
     "@types/node": "^20.8.10",
     "@types/nodemailer": "^6.4.13",

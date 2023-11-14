@@ -756,10 +756,10 @@
   resolved "https://registry.yarnpkg.com/@types/mjml-core/-/mjml-core-4.7.1.tgz#c2627499045b54eccfca38e2b532566fb0689189"
   integrity sha512-k5IRafi93tyZBGF+0BTrcBDvG47OueI+Q7TC4V4UjGQn0AMVvL3Y+S26QF/UHMmMJW5r1hxLyv3StX2/+FatFg==
 
-"@types/mjml@^4.7.3":
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/@types/mjml/-/mjml-4.7.3.tgz#ddefa204819c8a39d35c311c190765a9cad14e67"
-  integrity sha512-havWNfdB5mAYVds75XwCKm1aeh7GtXigBVWcxDY+zU2EAXY2TdvjZuy1AcLi76IssDqk8S9a1iwIaYtPrCb0tA==
+"@types/mjml@^4.7.4":
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/@types/mjml/-/mjml-4.7.4.tgz#f486c9e39dd1e5cf52e13e64bdc762be116e957d"
+  integrity sha512-vyi1vzWgMzFMwZY7GSZYX0GU0dmtC8vLHwpgk+NWmwbwRSrlieVyJ9sn5elodwUfklJM7yGl0zQeet1brKTWaQ==
   dependencies:
     "@types/mjml-core" "*"
 
@@ -768,10 +768,10 @@
   resolved "https://registry.yarnpkg.com/@types/mustache/-/mustache-4.2.4.tgz#74d37210e1467edd705a0959ba46dc5dc22c3815"
   integrity sha512-5DK8oX+pyEJm8Arm57Ut2R4KCeDuNQhLAuU04IgaKB7nYsFYzhpWqSoFnp7kCtVG7wXKftnaEJIyUFTVvSkkzw==
 
-"@types/node@*", "@types/node@^20.8.10":
-  version "20.8.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.10.tgz#a5448b895c753ae929c26ce85cab557c6d4a365e"
-  integrity sha512-TlgT8JntpcbmKUFzjhsyhGfP2fsiz1Mv56im6enJ905xG1DAYesxJaeSbGqQmAw8OWPdhyJGhGSQGKRNJ45u9w==
+"@types/node@*", "@types/node@^20.9.0":
+  version "20.9.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.0.tgz#bfcdc230583aeb891cf51e73cfdaacdd8deae298"
+  integrity sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==
   dependencies:
     undici-types "~5.26.4"
 

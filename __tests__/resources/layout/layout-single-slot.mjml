@@ -1,6 +1,6 @@
 <mjml>
   <mj-body>
-    {{ slots:header }}
+    {{{ slots:header }}}
     <mj-section background-color="#f3f3f3">
       <mj-column>
         <mj-text>{{templateData}}</mj-text>

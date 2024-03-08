@@ -1,15 +1,15 @@
 <mjml>
   <mj-body background-color="#F4F4F4">
     <mj-section background-color="#ffffff" background-repeat="repeat" padding-bottom="0px" padding-top="30px" padding="20px 0" text-align="center">
-      {{ slots:header }}
+      {{{ slots:header }}}
     </mj-section>
 
     <mj-section background-repeat="repeat" padding-bottom="0px" padding-top="0px" padding="20px 0" text-align="center">
-      {{ slots:content }}
+      {{{ slots:content }}}
     </mj-section>
 
     <mj-section background-color="#ffffff" background-repeat="repeat" padding="20px 0" text-align="center">
-      {{ slots:footer }}
+      {{{ slots:footer }}}
     </mj-section>
   </mj-body>
 </mjml>

@@ -2,7 +2,7 @@
   <mj-body>
     <mj-section>
       <mj-column>
-        {{ slots:customHeader }}
+        {{{ slots:customHeader }}}
       </mj-column>
     </mj-section>
     <mj-section background-color="#f3f3f3">
@@ -11,7 +11,7 @@
         <mj-text font-weight="bold" align="justify" font-size="24px" color="#000" font-family="helvetica">resources/layout/layout-multiple-slot.mjml</mj-text>
       </mj-column>
       <mj-column>
-        {{ slots:customContent }}
+        {{{ slots:customContent }}}
       </mj-column>
     </mj-section>
     <mj-section>
@@ -28,7 +28,7 @@
         <mj-button background-color="#8ccaca" border-radius="40px" font-family="helvetica" font-size="12px">READ MORE</mj-button>
       </mj-column>
       <mj-column>
-        {{ slots:customFooter }}
+        {{{ slots:customFooter }}}
       </mj-column>
     </mj-section>
   </mj-body>

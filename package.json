@@ -24,7 +24,7 @@
     "nodemailer": "^6.9.13",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "scripts": {
     "lint": "eslint . --ext .ts",

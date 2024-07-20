@@ -10,7 +10,6 @@
   "author": "Thomascogez <thomas.cogez@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/html-minifier": "^4.0.5",
     "@types/jest": "^29.5.12",
     "@types/mjml": "^4.7.4",
     "@types/mustache": "^4.2.5",
@@ -19,10 +18,14 @@
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "5.62.0",
+    "cssnano": "^7.0.4",
     "eslint": "^8.57.0",
+    "htmlnano": "^2.1.1",
     "jest": "^29.7.0",
     "nodemailer": "^6.9.14",
+    "postcss": "^8.4.39",
     "supertest": "^7.0.0",
+    "terser": "^5.31.3",
     "ts-jest": "^29.2.2",
     "typescript": "^5.5.3"
   },
@@ -34,11 +37,16 @@
     "test:watch": "jest --verbose --watchAll --runInBand --passWithNoTests --bail"
   },
   "dependencies": {
-    "html-minifier": "^4.0.0",
     "mjml": "^4.15.3",
     "mustache": "^4.2.0"
   },
   "peerDependencies": {
+    "htmlnano": "*",
     "nodemailer": "*"
+  },
+  "peerDependenciesMeta": {
+    "htmlnano": {
+      "optional": true
+    }
   }
 }

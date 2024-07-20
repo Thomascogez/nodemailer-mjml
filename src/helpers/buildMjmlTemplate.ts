@@ -1,6 +1,5 @@
 
 import { readFile } from "fs/promises";
-import { minify } from "html-minifier";
 import mjml2html from "mjml";
 import { render } from "mustache";
 import { join } from "path";
@@ -10,6 +9,7 @@ import { checkMjmlError } from "../helpers/checkMjmlError";
 import { BuildMjmlTemplateOptions } from "../types/BuildMjmlTemplateOptions";
 import { IPluginOptions } from "../types/IPluginsOptions";
 import { buildLayout } from "./buildLayout";
+import { minifyTemplate } from "./minifyTemplate";
 
 export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplateOptions: BuildMjmlTemplateOptions) => {
 
@@ -42,13 +42,13 @@ export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplat
         }
     })();
 
-    const mjmlOutput =  mjml2html(rawMjmlTemplate, {
+    const mjmlOutput = mjml2html(rawMjmlTemplate, {
         filePath: mjmlTemplatePath,
         ...renderOptions.mjmlOptions
     });
     checkMjmlError(mjmlOutput);
-    
-    const finalHtmlOutput = renderOptions.minifyHtmlOutput ? minify(mjmlOutput.html, renderOptions.htmlMinifierOptions) : mjmlOutput.html;
+
+    const finalHtmlOutput = renderOptions.minifyHtmlOutput ? await minifyTemplate(mjmlOutput.html, renderOptions.templateMinifierOptions) : mjmlOutput.html;
     const shouldRunMustacheCompiler = !!templateData && Object.keys(templateData ?? {}).length > 0;
 
     return shouldRunMustacheCompiler ? render(finalHtmlOutput, templateData) : finalHtmlOutput;

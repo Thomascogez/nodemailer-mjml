@@ -20,6 +20,15 @@ describe("Template render", () => {
                 const buildedTemplate = await buildMjmlTemplate({
                     templateFolder: join(__dirname, "../resources"),
                     minifyHtmlOutput: true,
+                    templateMinifierOptions: {
+                        options: {
+                            removeComments: false,
+                            collapseWhitespace: "all",
+                            minifyCss: true,
+                            minifyJs: false,
+                            minifySvg: false,
+                        },
+                    }
                 }, {
                     templateName: "test",
                 });
@@ -58,6 +67,15 @@ describe("Template render", () => {
                 const buildedTemplate = await buildMjmlTemplate({
                     templateFolder: join(__dirname, "../resources"),
                     minifyHtmlOutput: true,
+                    templateMinifierOptions: {
+                        options: {
+                            removeComments: false,
+                            collapseWhitespace: "all",
+                            minifyCss: true,
+                            minifyJs: false,
+                            minifySvg: false,
+                        },
+                    }
                 }, {
                     templateName: "test-mustache",
                     templateData
@@ -87,7 +105,16 @@ describe("Template render", () => {
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
                         templatePartialsFolder: "/include",
-                        minifyHtmlOutput: true
+                        minifyHtmlOutput: true,
+                        templateMinifierOptions: {
+                            options: {
+                                removeComments: false,
+                                collapseWhitespace: "all",
+                                minifyCss: true,
+                                minifyJs: false,
+                                minifySvg: false,
+                            },
+                        }
                     }, {
                         templateLayoutName: "layout/layout-single-slot"
                     });
@@ -111,7 +138,16 @@ describe("Template render", () => {
                 it("should send an email with a layout and fallback header with html minification and snapshot should match", async () => {
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
-                        minifyHtmlOutput: true
+                        minifyHtmlOutput: true,
+                        templateMinifierOptions: {
+                            options: {
+                                removeComments: false,
+                                collapseWhitespace: "all",
+                                minifyCss: true,
+                                minifyJs: false,
+                                minifySvg: false,
+                            },
+                        }
                     }, {
                         templateLayoutName: "layout/layout-single-slot"
                     });
@@ -163,7 +199,16 @@ describe("Template render", () => {
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
                         templatePartialsFolder: "/include",
-                        minifyHtmlOutput: true
+                        minifyHtmlOutput: true,
+                        templateMinifierOptions: {
+                            options: {
+                                removeComments: false,
+                                collapseWhitespace: "all",
+                                minifyCss: true,
+                                minifyJs: false,
+                                minifySvg: false,
+                            },
+                        }
                     }, {
                         templateLayoutName: "layout/layout-single-slot",
                         templateLayoutSlots,
@@ -215,7 +260,16 @@ describe("Template render", () => {
 
                     const buildedTemplate = await buildMjmlTemplate({
                         templateFolder: join(__dirname, "../resources"),
-                        minifyHtmlOutput: true
+                        minifyHtmlOutput: true,
+                        templateMinifierOptions: {
+                            options: {
+                                removeComments: false,
+                                collapseWhitespace: "all",
+                                minifyCss: true,
+                                minifyJs: false,
+                                minifySvg: false,
+                            },
+                        }
                     }, {
                         templateLayoutName: "layout/layout-single-slot",
                         templateLayoutSlots,

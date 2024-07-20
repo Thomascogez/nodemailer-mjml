@@ -1,3 +1,5 @@
+> [!WARNING]  
+>Migration guide from 1.3.x to 1.4.0 can be found [here](./MIGRATION_GUIDES/FROM_1.3.X_TO_1.4.md)
 
 <h1 align="center">
   <br>
@@ -151,10 +153,8 @@ sendTemplatedEmail();
 | templateFolder          | string             | Path of the dir containing your **MJML** template                                                                                                                                     | undefined                   |
 | templatePartialsFolder? | string             | Path relative to **templateFolder**, if defined when using a template layout it will be folder where **nodemailer-mjml** while try to find fallback slots if one or more is undefined | undefined                   |
 | mjmlOptions?            | MJMLParsingOptions | Options that would be passed to **MJML** compiler (see more) [mjml doc](https://github.com/mjmlio/mjml)                                                                               | {validationLevel: "strict"} |
-| minifyHtmlOutput?       | boolean            | use to enable/disable html minification using **html-minifier**                                                                                                                       | true                        |
-| htmlMinifierOptions?    | Options            | Options that would be passed to **html-minifier** (see more) [html-minifier doc](https://github.com/kangax/html-minifier)                                                             | undefined                   |
-
-### Send mail options
+| minifyHtmlOutput?       | boolean            | use to enable/disable html minification using **htmlnano**, if enabled make sure to install **htmlnano** as a devdependencies                                                                                                                       | false                        |
+| htmlMinifierOptions?    | {options?: HtmlnanoOptions; preset?: HtmlnanoPreset}            | Options that would be passed to **htmlnano** (see more) [htmlnano doc](https://htmlnano.netlify.app/)                                                             | undefined                   |
 
 > **nodemailer-mjml** bring 4 new params to the `sendMail` function
 

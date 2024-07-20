@@ -25,12 +25,11 @@ npm install --save-dev htmlnano
 or
 yarn add -D htmlnano
 ```
-:::note
-
-If you want `html` minification, you will need to also install `posthtml``
-If you want `html` minification, you will need to also install `postcss` and `cssnano`
-If you want `js` minification, you will need to also install `terser`
-If you want `svg` minification, you will need to also install `svgo`
+> [!NOTE]
+> If you want `html` minification, you will need to also install `posthtml`
+> If you want `html` minification, you will need to also install `postcss` and `cssnano`
+> If you want `js` minification, you will need to also install `terser`
+> If you want `svg` minification, you will need to also install `svgo`
 
 More information about the `htmlnano` options can be found [here](https://htmlnano.netlify.app/).
 :::

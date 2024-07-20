@@ -1,6 +1,6 @@
-:::warning
-    Migration guide from 1.3.x to 1.4.0 can be found [here](./MIGRATION_GUIDES/FROM_1.3.X_TO_1.4.md)
-:::
+> [!WARNING]  
+>Migration guide from 1.3.x to 1.4.0 can be found [here](./MIGRATION_GUIDES/FROM_1.3.X_TO_1.4.md)
+
 <h1 align="center">
   <br>
   Nodemailer-mjml

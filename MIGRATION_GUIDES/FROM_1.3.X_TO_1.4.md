@@ -32,6 +32,5 @@ yarn add -D htmlnano
 > If you want `svg` minification, you will need to also install `svgo`
 
 More information about the `htmlnano` options can be found [here](https://htmlnano.netlify.app/).
-:::
-
+‡
 ### 4. Update the plugin options by removing `htmlMinifierOptions` and adding `templateMinifierOptions` with your desired options

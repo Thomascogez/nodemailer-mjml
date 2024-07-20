@@ -26,12 +26,9 @@ or
 yarn add -D htmlnano
 ```
 > [!NOTE]
-> If you want `html` minification, you will need to also install `posthtml`
-> [!NOTE]
-> If you want `html` minification, you will need to also install `postcss` and `cssnano`
-> [!NOTE]
-> If you want `js` minification, you will need to also install `terser`
-> [!NOTE]
+> If you want `html` minification, you will need to also install `posthtml` <br>
+> If you want `html` minification, you will need to also install `postcss` and `cssnano` <br>
+> If you want `js` minification, you will need to also install `terser` <br>
 > If you want `svg` minification, you will need to also install `svgo`
 
 More information about the `htmlnano` options can be found [here](https://htmlnano.netlify.app/).

@@ -19,7 +19,7 @@ export const buildMjmlTemplate = async (options: IPluginOptions, sendMailTemplat
         mjmlOptions: {
             ...defaultPluginOptions.mjmlOptions,
             ...options.mjmlOptions
-        },
+        }
     };
 
     const { templateData, templateName, templateLayoutName, templateLayoutSlots } = sendMailTemplateOptions;

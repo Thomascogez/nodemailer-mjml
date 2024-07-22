@@ -26,7 +26,7 @@
     "postcss": "^8.4.39",
     "supertest": "^7.0.0",
     "terser": "^5.31.3",
-    "ts-jest": "^29.2.2",
+    "ts-jest": "^29.2.3",
     "typescript": "^5.5.3"
   },
   "scripts": {

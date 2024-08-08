@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v2
       
       - name: "Tests:run"
-        run: docker-compose run tests yarn test
+        run: docker compose run tests yarn test

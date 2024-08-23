@@ -27,7 +27,7 @@
     "supertest": "^7.0.0",
     "terser": "^5.31.5",
     "ts-jest": "^29.2.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "scripts": {
     "lint": "eslint . --ext .ts",

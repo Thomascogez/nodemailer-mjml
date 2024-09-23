@@ -25,7 +25,7 @@
     "nodemailer": "^6.9.14",
     "postcss": "^8.4.44",
     "supertest": "^7.0.0",
-    "terser": "^5.31.6",
+    "terser": "^5.33.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.5.4"
   },

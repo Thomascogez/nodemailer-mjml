@@ -50,7 +50,7 @@ transport.use('compile', nodemailerMjmlPlugin({/*Pass desired plugin options her
 
 ```ts
 import { createTransport } from "nodemailer";
-import { nodemailerMjmlPlugin } from "../src/index";
+import { nodemailerMjmlPlugin } from "nodemailer-mjml";
 import { join } from "path";
 
 const transport = createTransport({
@@ -105,7 +105,7 @@ sendTemplatedEmail();
 
 ```ts
 import { createTransport } from "nodemailer";
-import { nodemailerMjmlPlugin } from "../src/index";
+import { nodemailerMjmlPlugin } from "nodemailer-mjml";
 import { join } from "path";
 
 const transport = createTransport({

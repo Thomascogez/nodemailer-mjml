@@ -1,6 +1,6 @@
 {
   "name": "nodemailer-mjml",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

@@ -8,6 +8,7 @@
   ],
   "repository": "https://github.com/Thomascogez/nodemailer-mjml",
   "author": "Thomascogez <thomas.cogez@gmail.com>",
+  "packageManager": "yarn@3.8.7+sha256.81bf69deb72c6cfebaca4389444e034c914cc1a90ea40e4ac55a5e2a1d7063d2",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.14",

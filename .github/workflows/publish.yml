@@ -26,7 +26,9 @@ jobs:
         with:
           node-version: '23.x'
           registry-url: 'https://registry.npmjs.org'
-      
+      - name: "Enable corepack"
+        run: corepack enable
+        
       - name: "Publish:install"
         run: yarn
       

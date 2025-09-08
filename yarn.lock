@@ -1251,6 +1251,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/relateurl@npm:^0.2.33":
+  version: 0.2.33
+  resolution: "@types/relateurl@npm:0.2.33"
+  checksum: a4b7876cc24da3eddc1202d9f57fb6cdd551ff3d884124365dd15012dde20c2b4c19eee9bcd3b17e7c43e8edbe82a33753a6c266e41e3761283d44e6234d47da
+  languageName: node
+  linkType: hard
+
 "@types/semver@npm:^7.3.12":
   version: 7.3.13
   resolution: "@types/semver@npm:7.3.13"
@@ -3410,10 +3417,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"htmlnano@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "htmlnano@npm:2.1.2"
+"htmlnano@npm:^2.1.4":
+  version: 2.1.4
+  resolution: "htmlnano@npm:2.1.4"
   dependencies:
+    "@types/relateurl": ^0.2.33
     cosmiconfig: ^9.0.0
     posthtml: ^0.16.5
   peerDependencies:
@@ -3442,7 +3450,7 @@ __metadata:
       optional: true
     uncss:
       optional: true
-  checksum: 779f3e11f7fba2ed62558372b66eec7015f04718793cc363774b29fd21eac13064fd5f23967388389af964c6af13736f46494af0d24d28846cd205fb38da6f57
+  checksum: be420940f68e0225e8038fd708c408d43c1d4a6e2bc6b65c565cf21696108f5603d6abe8c1c0713d12652ddeab814268e5366705e94247376ed710bbeb8c95ac
   languageName: node
   linkType: hard
 
@@ -5273,7 +5281,7 @@ __metadata:
     "@typescript-eslint/parser": 5.62.0
     cssnano: ^7.1.1
     eslint: ^8.57.1
-    htmlnano: ^2.1.2
+    htmlnano: ^2.1.4
     jest: ^29.7.0
     mjml: ^4.15.3
     mustache: ^4.2.0

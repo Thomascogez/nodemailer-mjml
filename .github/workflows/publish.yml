@@ -5,6 +5,26 @@ on:
     types: [created]
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Quality:checkout"
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "23.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: "Enable corepack"
+        run: corepack enable
+
+      - name: "Install"
+        run: pnpm i
+
+      - name: "Check"
+        run: pnpm check
   test:
     runs-on: ubuntu-latest
     steps:
@@ -12,7 +32,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: "Tests:run"
-        run: docker compose run tests yarn test
+        run: docker compose run tests pnpm test
 
   publish:
     needs: test
@@ -32,11 +52,8 @@ jobs:
       - name: "Publish:install"
         run: pnpm i
 
-      - name: "Publish:Check"
-        run: pnpm check
-
       - name: "Publish:build"
-        run: yarn build
+        run: pnpm build
 
       - name: "Publish:publish package on NPM 📦"
         run: pnpm publish

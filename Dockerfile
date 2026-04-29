@@ -5,9 +5,8 @@ WORKDIR /usr/src/app
 RUN corepack enable
 
 COPY package.json .
-COPY yarn.lock .
-COPY .yarnrc.yml .
+COPY pnpm-lock.yaml .
 
-RUN yarn
+RUN pnpm install
 
 COPY . .

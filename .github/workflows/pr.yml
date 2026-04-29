@@ -19,7 +19,7 @@ jobs:
         run: corepack enable
 
       - name: "Install"
-        run: pnpm
+        run: pnpm i
 
       - name: "Check"
         run: pnpm check

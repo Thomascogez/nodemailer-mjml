@@ -30,7 +30,7 @@ jobs:
         run: corepack enable
 
       - name: "Publish:install"
-        run: pnpm
+        run: pnpm i
 
       - name: "Publish:Check"
         run: pnpm check
